@@ -1,0 +1,23 @@
+$primary: #000000;
+$secondary: #f5f5f5;
+
+$dark-grey: #898B8B;
+$darker-grey: #2F3131;
+$medium-grey: #C4C5C5;
+$light-grey: #EBECEC;
+$white: #FFFFFF;
+
+
+
+// Responsive
+$tablet: 750px;
+$desktop: 960px;
+$desktop-lg: 1400px;
+
+$grid-gutter: 20px;
+$grid-columns: 12;
+
+$grid-width: calc(100% - #{$grid-gutter});
+$grid-width-t: calc(90% - #{$grid-gutter});
+$grid-width-d: $desktop - $grid-gutter * 3;
+$grid-width-d-lg: $desktop-lg - $grid-gutter * 4;
