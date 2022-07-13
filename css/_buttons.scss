@@ -1,8 +1,17 @@
 button {
-    padding: 12px 20px;
-    color: $white;
-    border: none;
-    background-color: $darker-grey;
-    border-radius: 50px;
-    font-weight: 500;
+	padding: 12px 20px;
+	color: $white;
+	border: none;
+	background-color: $darker-grey;
+	border-radius: 20px;
+	font-weight: 500;
+
+	&.primary {
+		background-color: $primary;
+		color: $text-dark;
+	}
+
+	&.secondary {
+		background-color: $secondary;
+	}
 }
