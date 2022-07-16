@@ -7,7 +7,6 @@
 
 	.main-title {
 		max-width: 10ch;
-		font-size: 6.4rem;
 		font-weight: 700;
 		line-height: 130%;
 		letter-spacing: 0.05rem;
@@ -25,6 +24,9 @@
 }
 
 section {
+	position: relative;
+
+
 	&.landing-first {
 		height: 100vh;
 
@@ -37,8 +39,8 @@ section {
 		background: url(../assets/images/landing_home.jpg);
 		background-size: cover;
 		background-color: $dark-grey;
+		background-position: center center;
 		height: 100vh;
-		position: relative;
 
 		&::after {
 			content: "";
@@ -56,14 +58,30 @@ section {
 
 		.section-text {
 			color: $white;
-			padding: 3rem 6rem;
+			padding: 3rem 1.5rem;
 			justify-content: flex-end;
 			z-index: 2;
 		}
 	}
 
+	&.initial_section{
+		padding: 12rem 1.5rem 6rem;
+		text-align: center;
+		background: url(../assets/svg/backgrounds/first_section_mobile.svg);
+		background-size: cover;
+		background-position: top center;
+
+		.subtitle{
+			font-size: clamp(1.6rem, 100%, 2.4rem);
+			color: $Brand_Grey_text_onlightbg;
+			font-weight: 500;
+			margin-bottom: 3.2rem;
+			line-height: 2.5rem;
+		}
+	}
+
 	&.features-section {
-		padding: 20.8rem 0;
+		padding: 6rem 2rem;
 
 		h2 {
 			margin-bottom: 4.8rem;
@@ -72,12 +90,54 @@ section {
 
 		.features-list {
 			.feature {
+				// &:nth-child(1)::after {
+				// 	content: "";
+				// 	position: absolute;
+				// 	background: url(../assets/svg/features/join_01.svg);
+				// 	background-repeat: no-repeat;
+				// 	background-size: cover;
+				// 	height: 14.8rem;
+				// 	width: 20rem;
+				// 	top: 5rem;
+				// 	right: -10rem;
+				// 	z-index: -1;
+				// 	transform: rotate(2deg);
+				// }
+
+				// &:nth-child(2):after {
+				// 	content: "";
+				// 	position: absolute;
+				// 	background: url(../assets/svg/features/join_02.svg);
+				// 	background-repeat: no-repeat;
+				// 	background-size: cover;
+				// 	height: 14.8rem;
+				// 	width: 20rem;
+				// 	top: 5rem;
+				// 	right: -10rem;
+				// 	z-index: -1;
+				// 	transform: rotate(2deg);
+				// }
+				// &:nth-child(3):after {
+				// 	content: "";
+				// 	position: absolute;
+				// 	background: url(../assets/svg/features/join_03.svg);
+				// 	background-repeat: no-repeat;
+				// 	background-size: cover;
+				// 	height: 12.8rem;
+				// 	width: 25rem;
+				// 	top: 5rem;
+				// 	right: -12rem;
+				// 	z-index: -1;
+				// 	-webkit-transform: rotate(2deg);
+				// 	transform: rotate(-10deg);
+				// }
+
 				.feature-image {
 					display: flex;
 					justify-content: center;
 					align-items: center;
-					width: 200px;
-					height: 200px;
+					width: 20rem;
+					height: 20rem;
 					border-radius: 100%;
 					margin: 0 auto;
 					margin-bottom: 2.4rem;
@@ -167,7 +227,7 @@ section {
 				gap: 2.4rem;
 
 				.highlight {
-					border: 1px solid rgba(59, 61, 61, 1);
+					border: 1px solid rgba(224, 174, 22, 1);
 					border-radius: 2rem;
 					display: flex;
 					align-items: center;
@@ -237,14 +297,19 @@ section {
 			}
 
 			button {
-				cursor: pointer;
 				align-self: center;
 			}
 		}
 	}
 
+	&.articles_background {
+		position: absolute;
+		z-index: -1;
+		transform: translateY(-17rem);
+	}
+
 	&.challenges-section {
-		padding: 20.8rem 6rem;
+		padding: 10.8rem 6rem;
 
 		h2 {
 			margin-bottom: 4.8rem;
@@ -255,53 +320,17 @@ section {
 			gap: 2.4rem;
 		}
 	}
-}
 
-.card_challenge {
-	padding: 0 !important;
-	border-radius: 2rem;
-	overflow: hidden;
-	align-items: stretch;
-	background-color: rgba(229, 245, 252, 1);
+	&.articles-section {
+		padding: 10.8rem 6rem;
 
-	&_image {
-		width: 100%;
-		background-color: $dark-grey;
-		padding-top: 65%;
-	}
-
-	&_body {
-		display: flex;
-		flex-direction: column;
-		padding: 2.4rem;
-		gap: 2.4rem;
-
-		.categories {
-			display: flex;
-			gap: 0.8rem;
-
-			.category {
-				background: $white;
-				padding: 0.8rem 1.2rem;
-				border-radius: 50px;
-				font-size: 1.4rem;
-			}
+		h2 {
+			margin-bottom: 4.8rem;
+			text-align: center;
 		}
 
-		.title {
-			font-family: "Libre Baskerville", serif;
-			color: rgba(0, 63, 90, 1);
-			font-size: 2.8rem;
-			font-weight: 700;
-			line-height: 130%;
-		}
-
-		.description {
-			color: $dark-grey;
-		}
-
-		button {
-			background-color: rgba(0, 94, 134, 1);
+		.articles_list {
+			gap: 2.4rem;
 		}
 	}
 }

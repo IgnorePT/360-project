@@ -1,0 +1,117 @@
+.card {
+	padding: 0 !important;
+	border-radius: 2rem;
+	overflow: hidden;
+	align-items: stretch;
+    box-shadow: 0px 4px 10px rgba(59, 61, 61, 0.15);
+    display: flex;
+    flex-direction: column;
+}
+
+.card_challenge {
+	padding: 0 !important;
+	border-radius: 2rem;
+	overflow: hidden;
+	align-items: stretch;
+	background-color: rgba(229, 245, 252, 1);
+
+    &:hover{
+        background-color: rgba(204, 235, 249, 1);
+
+        button {
+			background-color: rgba(255, 192, 0, 1);
+            border: 2px solid #003F5A;
+		}
+
+    }
+
+	&_image {
+		width: 100%;
+		background-color: $dark-grey;
+		padding-top: 65%;
+	}
+
+	&_body {
+		display: flex;
+		flex-direction: column;
+		padding: 2.4rem;
+		gap: 2.4rem;
+        flex-grow: 1;
+
+		.categories {
+			display: flex;
+			gap: 0.8rem;
+
+			.category {
+				background: $white;
+				padding: 0.8rem 1.2rem;
+				border-radius: 50px;
+				font-size: 1.4rem;
+			}
+		}
+
+		.title {
+			font-family: "Libre Baskerville", serif;
+			color: rgba(0, 63, 90, 1);
+			font-size: 2.8rem;
+			font-weight: 700;
+			line-height: 130%;
+		}
+
+		.description {
+			color: $dark-grey;
+		}
+
+		button {
+			background-color: rgba(0, 94, 134, 1);
+            box-shadow: 0.4rem 0.6rem 0rem #3B3D3D;
+            border: 0.2rem solid #003F5A;
+            border-radius: 3rem;
+		}
+	}
+}
+
+.card_article {
+    background-color: $white;
+
+    &:hover{
+        background-color: rgba(252, 247, 232, 1);
+    }
+
+	&_image {
+		width: 100%;
+		background-color: $dark-grey;
+		padding-top: 65%;
+	}
+
+	.card_articles_body {
+        display: flex;
+		flex-direction: column;
+        justify-content: space-between;
+		padding: 2.4rem;
+		gap: 2.4rem;
+        height: 16.5rem;
+        flex-grow: 1;
+
+
+		.title {
+            font-family: "Libre Baskerville", serif;
+			color: rgba(0, 63, 90, 1);
+			font-size: 1.6rem;
+			font-weight: 700;
+			line-height: 130%;
+		}
+
+		.categories {
+			display: flex;
+			gap: 0.8rem;
+
+			.category {
+				background: $pastelSecondary;
+				padding: 0.8rem 1.2rem;
+				border-radius: 50px;
+				font-size: 1.4rem;
+			}
+		}
+	}
+}

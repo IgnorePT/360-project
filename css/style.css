@@ -54,25 +54,25 @@ table {
 }
 
 .gridrow {
-  width: calc(100% - 20px);
+  width: calc(100% - 2rem);
   margin: 0 auto;
 }
 
-@media (min-width: 750px) {
+@media (min-width: 76.7rem) {
   .gridrow {
-    width: calc(90% - 20px);
+    width: calc(90% - 2rem);
   }
 }
 
-@media (min-width: 960px) {
+@media (min-width: 96rem) {
   .gridrow {
-    width: 900px;
+    width: 90rem;
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 140rem) {
   .gridrow {
-    width: 1320px;
+    width: 132rem;
   }
 }
 
@@ -90,16 +90,16 @@ table {
           flex: 1;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .gridrow .col-1 {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 8.33333%;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .gridrow .offset-1 {
@@ -110,8 +110,8 @@ table {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 16.66667%;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .gridrow .offset-2 {
@@ -122,8 +122,8 @@ table {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 25%;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .gridrow .offset-3 {
@@ -134,8 +134,8 @@ table {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 33.33333%;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .gridrow .offset-4 {
@@ -146,8 +146,8 @@ table {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 41.66667%;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .gridrow .offset-5 {
@@ -158,8 +158,8 @@ table {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 50%;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .gridrow .offset-6 {
@@ -170,8 +170,8 @@ table {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 58.33333%;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .gridrow .offset-7 {
@@ -182,8 +182,8 @@ table {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 66.66667%;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .gridrow .offset-8 {
@@ -194,8 +194,8 @@ table {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 75%;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .gridrow .offset-9 {
@@ -206,8 +206,8 @@ table {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 83.33333%;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .gridrow .offset-10 {
@@ -218,8 +218,8 @@ table {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 91.66667%;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .gridrow .offset-11 {
@@ -230,23 +230,23 @@ table {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .gridrow .offset-12 {
   margin-left: 100%;
 }
 
-@media (min-width: 750px) {
+@media (min-width: 76.7rem) {
   .gridrow .col-t {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .gridrow .offset-t {
     margin-left: 0;
@@ -255,8 +255,8 @@ table {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 8.33333%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .gridrow .offset-t-1 {
     margin-left: 8.33333%;
@@ -265,8 +265,8 @@ table {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 16.66667%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .gridrow .offset-t-2 {
     margin-left: 16.66667%;
@@ -275,8 +275,8 @@ table {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 25%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .gridrow .offset-t-3 {
     margin-left: 25%;
@@ -285,8 +285,8 @@ table {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 33.33333%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .gridrow .offset-t-4 {
     margin-left: 33.33333%;
@@ -295,8 +295,8 @@ table {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 41.66667%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .gridrow .offset-t-5 {
     margin-left: 41.66667%;
@@ -305,8 +305,8 @@ table {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 50%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .gridrow .offset-t-6 {
     margin-left: 50%;
@@ -315,8 +315,8 @@ table {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 58.33333%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .gridrow .offset-t-7 {
     margin-left: 58.33333%;
@@ -325,8 +325,8 @@ table {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 66.66667%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .gridrow .offset-t-8 {
     margin-left: 66.66667%;
@@ -335,8 +335,8 @@ table {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 75%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .gridrow .offset-t-9 {
     margin-left: 75%;
@@ -345,8 +345,8 @@ table {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 83.33333%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .gridrow .offset-t-10 {
     margin-left: 83.33333%;
@@ -355,8 +355,8 @@ table {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 91.66667%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .gridrow .offset-t-11 {
     margin-left: 91.66667%;
@@ -365,23 +365,23 @@ table {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .gridrow .offset-t-12 {
     margin-left: 100%;
   }
 }
 
-@media (min-width: 960px) {
+@media (min-width: 96rem) {
   .gridrow .col-d {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .gridrow .offset-d {
     margin-left: 0;
@@ -390,8 +390,8 @@ table {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 8.33333%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .gridrow .offset-d-1 {
     margin-left: 8.33333%;
@@ -400,8 +400,8 @@ table {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 16.66667%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .gridrow .offset-d-2 {
     margin-left: 16.66667%;
@@ -410,8 +410,8 @@ table {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 25%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .gridrow .offset-d-3 {
     margin-left: 25%;
@@ -420,8 +420,8 @@ table {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 33.33333%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .gridrow .offset-d-4 {
     margin-left: 33.33333%;
@@ -430,8 +430,8 @@ table {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 41.66667%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .gridrow .offset-d-5 {
     margin-left: 41.66667%;
@@ -440,8 +440,8 @@ table {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 50%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .gridrow .offset-d-6 {
     margin-left: 50%;
@@ -450,8 +450,8 @@ table {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 58.33333%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .gridrow .offset-d-7 {
     margin-left: 58.33333%;
@@ -460,8 +460,8 @@ table {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 66.66667%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .gridrow .offset-d-8 {
     margin-left: 66.66667%;
@@ -470,8 +470,8 @@ table {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 75%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .gridrow .offset-d-9 {
     margin-left: 75%;
@@ -480,8 +480,8 @@ table {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 83.33333%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .gridrow .offset-d-10 {
     margin-left: 83.33333%;
@@ -490,8 +490,8 @@ table {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 91.66667%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .gridrow .offset-d-11 {
     margin-left: 91.66667%;
@@ -500,8 +500,8 @@ table {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .gridrow .offset-d-12 {
     margin-left: 100%;
@@ -609,6 +609,7 @@ h4,
 h5,
 h6,
 button {
+  color: #2f3131;
   font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
 }
@@ -617,16 +618,25 @@ button {
   font-weight: 500;
 }
 
-h1 {
-  font-size: 6.4rem;
-  font-weight: bold;
+h1,
+h2,
+h3,
+h4 {
   font-family: "Libre Baskerville", serif;
+  color: #003F5A;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: clamp(3.2rem, 100%, 6.4rem);
+  line-height: 140%;
+  margin-bottom: 2.4rem;
 }
 
 h2 {
-  font-size: 4.8rem;
+  font-size: clamp(2.8rem, 100%, 4.8rem);
+  line-height: 130%;
   font-weight: bold;
-  font-family: "Libre Baskerville", serif;
 }
 
 button {
@@ -636,6 +646,7 @@ button {
   background-color: #2f3131;
   border-radius: 20px;
   font-weight: 500;
+  cursor: pointer;
 }
 
 button.primary {
@@ -645,6 +656,172 @@ button.primary {
 
 button.secondary {
   background-color: #009de0;
+}
+
+button.challenge {
+  background-color: #005e86;
+  -webkit-box-shadow: 0.4rem 0.6rem 0rem #003F5A;
+          box-shadow: 0.4rem 0.6rem 0rem #003F5A;
+  border: 0.2rem solid #003F5A;
+  border-radius: 3rem;
+}
+
+button.challenge:hover {
+  background-color: #ffc000;
+  border-color: #003F5A;
+}
+
+button.challenge_secondary {
+  color: #003F5A;
+  background-color: #FFC000;
+  border-color: #003F5A;
+}
+
+.card {
+  padding: 0 !important;
+  border-radius: 2rem;
+  overflow: hidden;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-shadow: 0px 4px 10px rgba(59, 61, 61, 0.15);
+          box-shadow: 0px 4px 10px rgba(59, 61, 61, 0.15);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card_challenge {
+  padding: 0 !important;
+  border-radius: 2rem;
+  overflow: hidden;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  background-color: #e5f5fc;
+}
+
+.card_challenge:hover {
+  background-color: #ccebf9;
+}
+
+.card_challenge:hover button {
+  background-color: #ffc000;
+  border: 2px solid #003F5A;
+}
+
+.card_challenge_image {
+  width: 100%;
+  background-color: #898b8b;
+  padding-top: 65%;
+}
+
+.card_challenge_body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2.4rem;
+  gap: 2.4rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.card_challenge_body .categories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.8rem;
+}
+
+.card_challenge_body .categories .category {
+  background: #ffffff;
+  padding: 0.8rem 1.2rem;
+  border-radius: 50px;
+  font-size: 1.4rem;
+}
+
+.card_challenge_body .title {
+  font-family: "Libre Baskerville", serif;
+  color: #003f5a;
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 130%;
+}
+
+.card_challenge_body .description {
+  color: #898b8b;
+}
+
+.card_challenge_body button {
+  background-color: #005e86;
+  -webkit-box-shadow: 0.4rem 0.6rem 0rem #3B3D3D;
+          box-shadow: 0.4rem 0.6rem 0rem #3B3D3D;
+  border: 0.2rem solid #003F5A;
+  border-radius: 3rem;
+}
+
+.card_article {
+  background-color: #ffffff;
+}
+
+.card_article:hover {
+  background-color: #fcf7e8;
+}
+
+.card_article_image {
+  width: 100%;
+  background-color: #898b8b;
+  padding-top: 65%;
+}
+
+.card_article .card_articles_body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2.4rem;
+  gap: 2.4rem;
+  height: 16.5rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.card_article .card_articles_body .title {
+  font-family: "Libre Baskerville", serif;
+  color: #003f5a;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 130%;
+}
+
+.card_article .card_articles_body .categories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.8rem;
+}
+
+.card_article .card_articles_body .categories .category {
+  background: #f9efd0;
+  padding: 0.8rem 1.2rem;
+  border-radius: 50px;
+  font-size: 1.4rem;
 }
 
 header {
@@ -681,12 +858,11 @@ header nav {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  gap: 20px;
+  gap: 2rem;
 }
 
 .section-text .main-title {
   max-width: 10ch;
-  font-size: 6.4rem;
   font-weight: 700;
   line-height: 130%;
   letter-spacing: 0.05rem;
@@ -702,6 +878,10 @@ header nav {
   background: #898b8b;
 }
 
+section {
+  position: relative;
+}
+
 section.landing-first {
   height: 100vh;
 }
@@ -714,8 +894,8 @@ section.landing-video {
   background: url(../assets/images/landing_home.jpg);
   background-size: cover;
   background-color: #898b8b;
+  background-position: center center;
   height: 100vh;
-  position: relative;
 }
 
 section.landing-video::after {
@@ -731,15 +911,31 @@ section.landing-video::after {
 
 section.landing-video .section-text {
   color: #ffffff;
-  padding: 3rem 6rem;
+  padding: 3rem 1.5rem;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
   z-index: 2;
 }
 
+section.initial_section {
+  padding: 12rem 1.5rem 6rem;
+  text-align: center;
+  background: url(../assets/svg/backgrounds/first_section_mobile.svg);
+  background-size: cover;
+  background-position: top center;
+}
+
+section.initial_section .subtitle {
+  font-size: clamp(1.6rem, 100%, 2.4rem);
+  color: #3B3D3D;
+  font-weight: 500;
+  margin-bottom: 3.2rem;
+  line-height: 2.5rem;
+}
+
 section.features-section {
-  padding: 20.8rem 0;
+  padding: 6rem 2rem;
 }
 
 section.features-section h2 {
@@ -757,8 +953,8 @@ section.features-section .features-list .feature .feature-image {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 200px;
-  height: 200px;
+  width: 20rem;
+  height: 20rem;
   border-radius: 100%;
   margin: 0 auto;
   margin-bottom: 2.4rem;
@@ -856,7 +1052,7 @@ section.highlights-section .tabs .highlights-tabs {
 }
 
 section.highlights-section .tabs .highlights-tabs .highlight {
-  border: 1px solid #3b3d3d;
+  border: 1px solid #e0ae16;
   border-radius: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -954,14 +1150,20 @@ section.cta-challenge .cta_challenge_content .subtitle {
 }
 
 section.cta-challenge .cta_challenge_content button {
-  cursor: pointer;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
 
+section.articles_background {
+  position: absolute;
+  z-index: -1;
+  -webkit-transform: translateY(-17rem);
+          transform: translateY(-17rem);
+}
+
 section.challenges-section {
-  padding: 20.8rem 6rem;
+  padding: 10.8rem 6rem;
 }
 
 section.challenges-section h2 {
@@ -973,61 +1175,16 @@ section.challenges-section .challenge_list {
   gap: 2.4rem;
 }
 
-.card_challenge {
-  padding: 0 !important;
-  border-radius: 2rem;
-  overflow: hidden;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  background-color: #e5f5fc;
+section.articles-section {
+  padding: 10.8rem 6rem;
 }
 
-.card_challenge_image {
-  width: 100%;
-  background-color: #898b8b;
-  padding-top: 65%;
+section.articles-section h2 {
+  margin-bottom: 4.8rem;
+  text-align: center;
 }
 
-.card_challenge_body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 2.4rem;
+section.articles-section .articles_list {
   gap: 2.4rem;
-}
-
-.card_challenge_body .categories {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.8rem;
-}
-
-.card_challenge_body .categories .category {
-  background: #ffffff;
-  padding: 0.8rem 1.2rem;
-  border-radius: 50px;
-  font-size: 1.4rem;
-}
-
-.card_challenge_body .title {
-  font-family: "Libre Baskerville", serif;
-  color: #003f5a;
-  font-size: 2.8rem;
-  font-weight: 700;
-  line-height: 130%;
-}
-
-.card_challenge_body .description {
-  color: #898b8b;
-}
-
-.card_challenge_body button {
-  background-color: #005e86;
 }
 /*# sourceMappingURL=style.css.map */

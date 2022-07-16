@@ -5,6 +5,7 @@ button {
 	background-color: $darker-grey;
 	border-radius: 20px;
 	font-weight: 500;
+	cursor: pointer;
 
 	&.primary {
 		background-color: $primary;
@@ -13,5 +14,23 @@ button {
 
 	&.secondary {
 		background-color: $secondary;
+	}
+
+	&.challenge {
+		background-color: rgba(0, 94, 134, 1);
+		box-shadow: 0.4rem 0.6rem 0rem $Darker_Blue_text;
+		border: 0.2rem solid $Darker_Blue_text;
+		border-radius: 3rem;
+
+		&:hover{
+			background-color: rgba(255, 192, 0, 1);
+            border-color: $Darker_Blue_text;
+		}
+
+		&_secondary{
+			color: $Darker_Blue_text;
+			background-color: $Yellow_CTA;
+            border-color: $Darker_Blue_text;
+		}
 	}
 }
