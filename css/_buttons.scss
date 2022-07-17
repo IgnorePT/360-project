@@ -1,11 +1,15 @@
 button {
-	padding: 12px 20px;
+	padding: 0.8rem 2.4rem;
 	color: $white;
 	border: none;
 	background-color: $darker-grey;
 	border-radius: 20px;
 	font-weight: 500;
 	cursor: pointer;
+
+	@media screen and (min-width: 76.7){
+		padding: 1.2rem 2rem;
+	}
 
 	&.primary {
 		background-color: $primary;

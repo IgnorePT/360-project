@@ -1,30 +1,11 @@
-.section-text {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-start;
-	gap: $grid-gutter;
-
-	.main-title {
-		max-width: 10ch;
-		font-weight: 700;
-		line-height: 130%;
-		letter-spacing: 0.05rem;
-	}
-
-	.subtitle {
-		font-size: 2.4rem;
-	}
-}
-
-.section-image {
-	width: 100%;
-	height: 100%;
-	background: $dark-grey;
-}
-
 section {
 	position: relative;
+
+	h2 {
+		margin-bottom: 2.4rem;
+		text-align: center;
+		line-height: 155%;
+	}
 
 
 	&.landing-first {
@@ -49,11 +30,9 @@ section {
 			height: 100%;
 			bottom: 0;
 			z-index: 0;
-			background: linear-gradient(
-				180deg,
-				rgba(47, 49, 49, 0) 0%,
-				#2f31317c 100%
-			);
+			background: linear-gradient(180deg,
+					rgba(47, 49, 49, 0) 0%,
+					#2f31317c 100%);
 		}
 
 		.section-text {
@@ -64,14 +43,14 @@ section {
 		}
 	}
 
-	&.initial_section{
+	&.initial_section {
 		padding: 12rem 1.5rem 6rem;
 		text-align: center;
 		background: url(../assets/svg/backgrounds/first_section_mobile.svg);
 		background-size: cover;
 		background-position: top center;
 
-		.subtitle{
+		.subtitle {
 			font-size: clamp(1.6rem, 100%, 2.4rem);
 			color: $Brand_Grey_text_onlightbg;
 			font-weight: 500;
@@ -81,181 +60,155 @@ section {
 	}
 
 	&.features-section {
-		padding: 6rem 2rem;
+		padding: 6rem 2rem 12rem;
 
 		h2 {
+			font-size: clamp(2.8rem, 100%, 4.8rem);
 			margin-bottom: 4.8rem;
 			text-align: center;
 		}
 
 		.features-list {
-			.feature {
-				// &:nth-child(1)::after {
-				// 	content: "";
-				// 	position: absolute;
-				// 	background: url(../assets/svg/features/join_01.svg);
-				// 	background-repeat: no-repeat;
-				// 	background-size: cover;
-				// 	height: 14.8rem;
-				// 	width: 20rem;
-				// 	top: 5rem;
-				// 	right: -10rem;
-				// 	z-index: -1;
-				// 	transform: rotate(2deg);
-				// }
+			gap: 4rem;
 
-				// &:nth-child(2):after {
-				// 	content: "";
-				// 	position: absolute;
-				// 	background: url(../assets/svg/features/join_02.svg);
-				// 	background-repeat: no-repeat;
-				// 	background-size: cover;
-				// 	height: 14.8rem;
-				// 	width: 20rem;
-				// 	top: 5rem;
-				// 	right: -10rem;
-				// 	z-index: -1;
-				// 	transform: rotate(2deg);
-				// }
-				// &:nth-child(3):after {
-				// 	content: "";
-				// 	position: absolute;
-				// 	background: url(../assets/svg/features/join_03.svg);
-				// 	background-repeat: no-repeat;
-				// 	background-size: cover;
-				// 	height: 12.8rem;
-				// 	width: 25rem;
-				// 	top: 5rem;
-				// 	right: -12rem;
-				// 	z-index: -1;
-				// 	-webkit-transform: rotate(2deg);
-				// 	transform: rotate(-10deg);
-				// }
+			.feature {
 
 				.feature-image {
 					display: flex;
 					justify-content: center;
 					align-items: center;
 					width: 20rem;
-					height: 20rem;
 					border-radius: 100%;
 					margin: 0 auto;
 					margin-bottom: 2.4rem;
+
+					img {
+						width: 16.5rem;
+					}
 				}
 
 				.feature-text {
 					text-align: center;
 					font-size: 1.8rem;
 					line-height: 125%;
+					font-weight: 500;
 				}
 			}
-		}
-	}
-
-	&.highlights-section {
-		min-height: 68rem;
-		padding: 5.2rem 0 6.2rem;
-		background-color: $pastelSecondary;
-		position: relative;
-		align-items: stretch;
-
-		&::before {
-			content: "";
-			position: absolute;
-			background: url(../assets/svg/dividers/highlights-top.svg);
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-position: center;
-			height: 12.5rem;
-			width: 100%;
-			top: -12.5rem;
-			z-index: 0;
 		}
 
 		&::after {
 			content: "";
 			position: absolute;
-			background: url(../assets/svg/dividers/highlights-bottom.svg);
+			background: url(../assets/svg/dividers/highlights-top-mobile.svg);
 			background-size: cover;
 			background-repeat: no-repeat;
-			background-position: center;
-			height: 8.257rem;
+			background-position: center center;
+			height: 5.8rem;
 			width: 100%;
-			bottom: -8.257rem;
-			z-index: 0;
+			bottom: 0;
+			left: 0;
+			z-index: -1;
+		}
+	}
+
+	&.highlights-section {
+		display: grid;
+		grid-template-areas: "title"
+							 "tabs-content"
+							 "tabs";
+		min-height: 68rem;
+		padding: 1.8rem 0;
+		background-color: $pastelSecondary;
+		position: relative;
+
+		h2 {
+			grid-area: title;
+			max-width: 26ch;
 		}
 
-		.highlights_content {
+		.highlights_content{
+			grid-area: tabs-content;
+			min-height: 32rem;
 			overflow: hidden;
+
 			.highlight_content {
 				display: none;
 				position: relative;
-
+	
 				&.active {
 					display: block;
 				}
-
+	
 				.article_featured {
+					width: 20rem;
+					display: block;
 					position: absolute;
-					z-index: 9;
-
+	
 					&.featured_1 {
-						top: 5.5rem;
-						left: 0rem;
+						top: 0rem;
+						left: -1rem;
 					}
-
+	
 					&.featured_2 {
-						top: 15rem;
-						left: 34rem;
+						top: 8rem;
+						left: 22rem;
 					}
 				}
 			}
 		}
+		
 
-		.tabs {
-			padding: 0 6rem;
+		.highlights-tabs {
+			 grid-area: tabs;
+			display: flex;
+			flex-direction: column;
+			padding: 3.2rem 1.5rem;
+			gap: 1.6rem;
 
-			h2 {
-				max-width: 26ch;
-				font-size: 3.2rem;
-				margin-bottom: 4.8rem;
-			}
-
-			.highlights-tabs {
+			.highlight {
+				border: 1px solid rgba(224, 174, 22, 1);
+				border-radius: 2rem;
 				display: flex;
-				flex-direction: column;
-				gap: 2.4rem;
+				align-items: center;
+				gap: 1.2rem;
+				padding: 1.6rem;
+			
 
-				.highlight {
-					border: 1px solid rgba(224, 174, 22, 1);
-					border-radius: 2rem;
-					display: flex;
-					align-items: center;
-					gap: 2rem;
-					padding: 2.4rem;
-					margin-left: 1.6rem;
+				&.active {
+					background-color: $white;
+				}
 
-					&.active {
-						background-color: $white;
-					}
+				.highlight-text{
+					font-size: 1.4rem;
+				}
 
-					.highlight-image {
-						width: 5.6rem;
-						height: 5.6rem;
-						background-color: $dark-grey;
-						border-radius: 100%;
-					}
+				.highlight-image {
+					width: 3.2rem;
 				}
 			}
 		}
 	}
 
 	&.cta-challenge {
-		padding: 32.8rem 0;
+		padding: 24rem 4.2rem;
 		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		overflow: hidden;
+
+		&::before {
+			content: "";
+			position: absolute;
+			background: url(../assets/svg/dividers/highlights-bottom-mobile.svg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+			height: 4.2rem;
+			width: 100%;
+			top: 0;
+			z-index: 0;
+		}
 
 		.svg_dots {
 			position: absolute;
@@ -263,8 +216,9 @@ section {
 			align-items: center;
 			justify-content: center;
 			z-index: 0;
+
 			svg {
-				width: 100%;
+				transform: scale(1) translateX(1.5rem);
 			}
 		}
 
@@ -273,9 +227,10 @@ section {
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			z-index: 0;
+			z-index: -1;
+
 			svg {
-				width: 100%;
+				transform: scale(1) translateX(1rem);
 			}
 		}
 
@@ -285,15 +240,19 @@ section {
 			color: $white;
 			display: flex;
 			flex-direction: column;
-			gap: 2.4rem;
+			gap: 1.6rem;
 
 			h2 {
-				font-size: 5.4rem;
+				color: $white;
+				font-size: clamp(2.8rem, 100%, 5.4rem);
+				font-weight: 700;
+				line-height: 130%;
+				margin: 0;
 			}
 
 			.subtitle {
-				font-size: 2.4rem;
-				margin-bottom: 2.4rem;
+				color: $white;
+				line-height: 160%;
 			}
 
 			button {
@@ -303,22 +262,31 @@ section {
 	}
 
 	&.articles_background {
+		width: 100%;
+		overflow: hidden;
 		position: absolute;
 		z-index: -1;
 		transform: translateY(-17rem);
+
+		img{
+			max-width: 150%;
+		}
 	}
 
 	&.challenges-section {
-		padding: 10.8rem 6rem;
+		padding: 6rem 1.5rem;
 
 		h2 {
-			margin-bottom: 4.8rem;
+			margin-bottom: 2.4rem;
 			text-align: center;
 		}
 
 		.challenge_list {
+			flex-direction: column;
 			gap: 2.4rem;
 		}
+
+		
 	}
 
 	&.articles-section {
@@ -333,4 +301,31 @@ section {
 			gap: 2.4rem;
 		}
 	}
+}
+
+
+//Others
+.section-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	gap: $grid-gutter;
+
+	.main-title {
+		max-width: 10ch;
+		font-weight: 700;
+		line-height: 130%;
+		letter-spacing: 0.05rem;
+	}
+
+	.subtitle {
+		font-size: 2.4rem;
+	}
+}
+
+.section-image {
+	width: 100%;
+	height: 100%;
+	background: $dark-grey;
 }
