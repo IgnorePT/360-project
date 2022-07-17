@@ -1,9 +1,16 @@
 header {
 	position: fixed;
 	width: 100%;
-	padding: 26.6px 32px;
+	padding: 2.66rem 1.5rem;
     background: $white;
     z-index: 10;
+
+	.logo{
+		max-width: 50%;
+		img{
+			width: 100%;
+		}
+	}
 
 	nav {
 		display: flex;

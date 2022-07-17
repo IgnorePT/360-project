@@ -12,12 +12,21 @@ button {
 	}
 
 	&.primary {
-		background-color: $primary;
-		color: $text-dark;
+		display: inline-block;
+		background-color: $Brand_Blue_bg_color;
+		color: $white;
+		border: 0.2rem solid $Darker_Blue_text;
+		border-radius: 3rem;
+		box-shadow: 0px 4px 10px rgba(59, 61, 61, 0.2);
 	}
 
 	&.secondary {
 		background-color: $secondary;
+	}
+
+	&.newsletter{
+		padding: 1rem 2.4rem;
+		align-self: flex-start;
 	}
 
 	&.challenge {
@@ -37,4 +46,12 @@ button {
             border-color: $Darker_Blue_text;
 		}
 	}
+}
+
+@mixin challenge-mobile{
+	box-shadow: 0.4rem 0.6rem 0rem $Darker_Blue_text;
+	border: 0.2rem solid;
+	color: $Darker_Blue_text;
+	background-color: $Yellow_CTA;
+	border-color: $Darker_Blue_text;
 }

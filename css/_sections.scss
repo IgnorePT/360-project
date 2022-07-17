@@ -114,11 +114,11 @@ section {
 	&.highlights-section {
 		display: grid;
 		grid-template-areas: "title"
-							 "tabs-content"
-							 "tabs";
+			"tabs-content"
+			"tabs";
 		min-height: 68rem;
 		padding: 1.8rem 0;
-		background-color: $pastelSecondary;
+		background-color: $Light_Yellow_bg_color;
 		position: relative;
 
 		h2 {
@@ -126,7 +126,7 @@ section {
 			max-width: 26ch;
 		}
 
-		.highlights_content{
+		.highlights_content {
 			grid-area: tabs-content;
 			min-height: 32rem;
 			overflow: hidden;
@@ -134,21 +134,21 @@ section {
 			.highlight_content {
 				display: none;
 				position: relative;
-	
+
 				&.active {
 					display: block;
 				}
-	
+
 				.article_featured {
 					width: 20rem;
 					display: block;
 					position: absolute;
-	
+
 					&.featured_1 {
 						top: 0rem;
 						left: -1rem;
 					}
-	
+
 					&.featured_2 {
 						top: 8rem;
 						left: 22rem;
@@ -156,10 +156,10 @@ section {
 				}
 			}
 		}
-		
+
 
 		.highlights-tabs {
-			 grid-area: tabs;
+			grid-area: tabs;
 			display: flex;
 			flex-direction: column;
 			padding: 3.2rem 1.5rem;
@@ -172,13 +172,13 @@ section {
 				align-items: center;
 				gap: 1.2rem;
 				padding: 1.6rem;
-			
+
 
 				&.active {
 					background-color: $white;
 				}
 
-				.highlight-text{
+				.highlight-text {
 					font-size: 1.4rem;
 				}
 
@@ -268,7 +268,7 @@ section {
 		z-index: -1;
 		transform: translateY(-17rem);
 
-		img{
+		img {
 			max-width: 150%;
 		}
 	}
@@ -286,20 +286,64 @@ section {
 			gap: 2.4rem;
 		}
 
-		
+
 	}
 
 	&.articles-section {
-		padding: 10.8rem 6rem;
+		padding: 6rem 0;
 
 		h2 {
-			margin-bottom: 4.8rem;
 			text-align: center;
 		}
 
 		.articles_list {
 			gap: 2.4rem;
+			flex-wrap: nowrap;
+			overflow-y: auto;
+			padding: 0 1.5rem;
+			padding-bottom: 2.4rem;
+			scroll-snap-type: x;
+			scrollbar-width: none;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
 		}
+	}
+
+	&.newsletter-section {
+		padding: 6rem 1.5rem;
+
+		.newsletter-container {
+			background-color: $Medium_Blue_bg_color;
+			display: flex;
+			flex-direction: column;
+			padding: 8rem 2.4rem;
+			border-radius: 3rem;
+			gap: 3.2rem;
+
+			.information {
+				display: flex;
+				flex-direction: column;
+				gap: 2.4rem;
+
+				.subtitle {
+					color: $Brand_Grey_text_onlightbg;
+					width: 20ch;
+					line-height: 160%;
+				}
+
+				h2 {
+					color: $Darker_Blue_text;
+					font-size: 2.8rem;
+					line-height: 130%;
+					text-align: left;
+					font-weight: 700;
+				}
+			}
+
+		}
+
 	}
 }
 

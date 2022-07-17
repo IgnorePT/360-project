@@ -1,0 +1,79 @@
+.form-group{
+    height: auto;
+    opacity: 1;
+    transition: all 1s ease-in;
+    
+}
+
+.form-none{
+    display: none;
+}
+
+.form-hidden {
+    height: 0;
+    opacity: 0;
+}
+
+#subscribe-newsletter {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    height: auto;
+    transition: all 1s;
+
+    h5 {
+        color: $Brand_Grey_text_onlightbg;
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+    }
+
+    input,
+    select {
+        font-family: 'Poppins';
+        width: 100%;
+        font-size: 1.4rem;
+        padding: 1.8rem 2.6rem;
+        border-radius: 2rem;
+        color: $Brand_Grey_text_onlightbg;
+        margin-bottom: 2.4rem;
+    }
+
+    .custom_checkbox {
+        .custom_checkbox_container {
+            border: 0.1rem solid $Brand_Grey_text_onlightbg;
+            border-radius: 2rem;
+            overflow: hidden;
+
+            .custom_checkbox_label {
+                display: block;
+                text-align: center;
+                padding: 1.2rem 2rem;
+                border: 1px;
+                background: $white;
+
+                &.active {
+                    background: $Yellow_CTA;
+                }
+            }
+        }
+    }
+
+    .custom_select{
+        .active-selection {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+
+            span{
+               display: flex;
+               padding: 1.2rem 2rem;
+               gap: 0.8rem;
+               background-color: $Yellow_CTA;
+               align-items: center;
+               border-radius: 2rem;
+               border: 1px solid;
+            }
+        }
+    }
+
+}

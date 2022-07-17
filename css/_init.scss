@@ -25,6 +25,10 @@ button {
 	font-weight: 500;
 }
 
+a{
+	text-decoration: none;
+}
+
 h1,
 h2,
 h3,
@@ -63,4 +67,8 @@ h2 {
 	.desktop {
 		display: none;
 	}
+}
+
+.hidden{
+	display: none;
 }
