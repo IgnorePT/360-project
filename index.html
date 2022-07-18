@@ -428,14 +428,14 @@
                         </select>
 
                         <div class="active-selection">
-                       
+
                         </div>
                     </div>
 
                     <div class="form-group custom_select form-hidden form-none">
                         <button class="primary newsletter" type="submit">Subscrever newsletter</button>
                     </div>
-                   
+
 
 
                 </form>
@@ -443,6 +443,74 @@
             </div>
 
         </section>
+
+        <footer>
+            <img class="footer_logo" src="assets/svg/logo_footer.svg" alt="Pais e Alunos Logo" srcset="">
+
+            <nav class="footer_menu">
+                <ul>
+                    <li>Equipa</li>
+                    <li>Artigos</li>
+                    <li>Desafios</li>
+                    <li>Contacto</li>
+                </ul>
+            </nav>
+
+            <div class="newsletter-container">
+                <div class="information">
+                    <p class="subtitle">Explore o mundo digital
+                        e temas atuais.</p>
+
+                    <h2>
+                        Enviamos os nossos artigos e conteúdos mais recentes.
+                    </h2>
+                </div>
+                <form id="subscribe-newsletter">
+                    <div class="form-group">
+                        <h5>E-mail*</h5>
+                        <input type="email" name="email" id="newsletter-email" placeholder="exemplo@email.com" />
+                    </div>
+
+
+                    <div class="form-group custom_checkbox form-hidden form-none">
+                        <h5>Inscreva-se como</h5>
+                        <div class="custom_checkbox_container">
+                            <label class="custom_checkbox_label active" for="encarregado-educacao">Encarregado de
+                                educação</label>
+                            <label class="custom_checkbox_label" for="professor">Professor</label>
+
+                            <input class="hidden" id="professor" name="profile" type="checkbox" value="professor" />
+
+                            <input class="hidden" id="encarregado-educacao" name="profile" type="checkbox"
+                                value="encarregado-educacao" />
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="form-group custom_select form-hidden form-none">
+                        <h5>Em que ciclo(s) se encontra(m) seu(s) educandos?</h5>
+
+                        <select id="ciclo-estudo" class="ciclo">
+                            <option value="">Selecione os ciclos</option>
+                            <option value="1º Ciclo">1º Ciclo</option>
+                            <option value="2º Ciclo">2º Ciclo</option>
+                            <option value="3º Ciclo">3º Ciclo</option>
+                        </select>
+
+                        <div class="active-selection">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group custom_select form-hidden form-none">
+                        <button class="primary newsletter" type="submit">Subscrever newsletter</button>
+                    </div>
+                </form>
+            </div>
+
+        </footer>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
