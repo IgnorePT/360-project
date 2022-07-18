@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const NewsletterForm = document.getElementById('subscribe-newsletter');
 
     const NewsletterEmail = document.getElementById('newsletter-email');
 

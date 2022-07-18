@@ -9,7 +9,7 @@
 }
 
 .card_challenge {
-	padding: 9rem 2.4rem 2.4rem;
+	padding:11rem 2.4rem 2.4rem;
 	border-radius: 2rem;
 	overflow: hidden;
 	align-items: stretch;
@@ -56,6 +56,30 @@
 		background: url(../assets/svg/challenge_cards/blob_2.svg);
 		width: 33rem;
 		height: 13.3rem;
+	}
+
+	&.custom_challenge{
+		background-color: $Medium_Blue_CTA;
+
+		.share_challenge_link{
+			position: absolute;
+			top: 2.4rem;
+			right: 2.4rem
+		}
+
+		h4{
+			color: $white;
+		}
+
+		.description{
+			color: $white;
+		}
+
+		&::before{
+			background: url(../assets/svg/challenge_cards/custom.svg);
+			width: 28.7rem;
+			height: 19.7rem;
+		}
 	}
 
 

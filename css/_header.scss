@@ -4,6 +4,8 @@ header {
 	padding: 2.66rem 1.5rem;
     background: $white;
     z-index: 10;
+	box-shadow: 0px 4px 10px rgba(59, 61, 61, 0.15);
+
 
 	.logo{
 		max-width: 50%;
@@ -16,5 +18,18 @@ header {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		.left_nav{
+			display: flex;
+			align-items: center;
+			gap: 1.6rem;
+		}
+
+		.menu{
+			display: flex;
+			align-items: center;
+			justify-content:end;
+			gap: 0.8rem;
+		}
 	}
 }
