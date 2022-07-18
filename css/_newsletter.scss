@@ -5,6 +5,27 @@
     padding: 8rem 2.4rem;
     border-radius: 3rem;
     gap: 3.2rem;
+    position: relative;
+    overflow: hidden;
+
+    &:nth-child(2){
+        overflow: visible;
+    }
+
+    :before{
+        content: '';
+        position: absolute;
+        background: url(../assets/svg/newsletter/lasso.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 12.8rem;
+        width: 11.8rem;
+        top: -2rem;
+        right: -2rem;
+        z-index: 0;
+        transform: scale(0.7);
+    }
 
     .information {
         display: flex;
@@ -56,6 +77,16 @@
         color: $Brand_Grey_text_onlightbg;
         font-size: 1.4rem;
         margin-bottom: 0.8rem;
+    }
+    .form-group{
+        z-index: 1;
+    }
+
+    img.zigzag{
+        position: absolute;
+        right: 0;
+        transform: translateY(-5rem);
+        z-index: 0;
     }
 
     input,

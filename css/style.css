@@ -978,7 +978,7 @@ footer {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  padding: 4rem 1.5rem 6rem;
+  padding: 4rem 0 6rem;
   background: #CCEBF9;
 }
 
@@ -1381,7 +1381,7 @@ section.articles-section .articles_list::-webkit-scrollbar {
 }
 
 section.newsletter-section {
-  padding: 6rem 1.5rem;
+  padding: 6rem 1.5rem 12rem;
 }
 
 .section-text {
@@ -1430,6 +1430,28 @@ section.newsletter-section {
   padding: 8rem 2.4rem;
   border-radius: 3rem;
   gap: 3.2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.newsletter-container:nth-child(2) {
+  overflow: visible;
+}
+
+.newsletter-container :before {
+  content: '';
+  position: absolute;
+  background: url(../assets/svg/newsletter/lasso.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 12.8rem;
+  width: 11.8rem;
+  top: -2rem;
+  right: -2rem;
+  z-index: 0;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
 }
 
 .newsletter-container .information {
@@ -1491,6 +1513,18 @@ section.newsletter-section {
   color: #3B3D3D;
   font-size: 1.4rem;
   margin-bottom: 0.8rem;
+}
+
+#subscribe-newsletter .form-group {
+  z-index: 1;
+}
+
+#subscribe-newsletter img.zigzag {
+  position: absolute;
+  right: 0;
+  -webkit-transform: translateY(-5rem);
+          transform: translateY(-5rem);
+  z-index: 0;
 }
 
 #subscribe-newsletter input,
