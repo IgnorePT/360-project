@@ -1,3 +1,317 @@
+section {
+	position: relative;
+
+	h2 {
+		margin-bottom: 2.4rem;
+		text-align: center;
+		line-height: 155%;
+	}
+
+
+	&.landing-first {
+		height: 100vh;
+
+		.section-text {
+			padding: 6rem;
+		}
+	}
+
+	&.landing-video {
+		background: url(../assets/images/landing_home.jpg);
+		background-size: cover;
+		background-color: $dark-grey;
+		background-position: center center;
+		height: 100vh;
+
+		&::after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			bottom: 0;
+			z-index: 0;
+			background: linear-gradient(180deg,
+					rgba(47, 49, 49, 0) 0%,
+					#2f31317c 100%);
+		}
+
+		.section-text {
+			color: $white;
+			padding: 3rem 1.5rem;
+			justify-content: flex-end;
+			z-index: 2;
+		}
+	}
+
+	&.initial_section {
+		padding: 12rem 1.5rem 6rem;
+		text-align: center;
+		background: url(../assets/svg/backgrounds/first_section_mobile.svg);
+		background-size: cover;
+		background-position: top center;
+
+		.subtitle {
+			font-size: clamp(1.6rem, 100%, 2.4rem);
+			color: $Brand_Grey_text_onlightbg;
+			font-weight: 500;
+			margin-bottom: 3.2rem;
+			line-height: 2.5rem;
+		}
+	}
+
+	&.features-section {
+		padding: 6rem 2rem 12rem;
+
+		h2 {
+			font-size: clamp(2.8rem, 100%, 4.8rem);
+			margin-bottom: 4.8rem;
+			text-align: center;
+		}
+
+		.features-list {
+			gap: 4rem;
+
+			.feature {
+
+				.feature-image {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 20rem;
+					border-radius: 100%;
+					margin: 0 auto;
+					margin-bottom: 2.4rem;
+
+					img {
+						width: 16.5rem;
+					}
+				}
+
+				.feature-text {
+					text-align: center;
+					font-size: 1.8rem;
+					line-height: 125%;
+					font-weight: 500;
+				}
+			}
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			background: url(../assets/svg/dividers/highlights-top-mobile.svg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+			height: 5.8rem;
+			width: 100%;
+			bottom: 0;
+			left: 0;
+			z-index: -1;
+		}
+	}
+
+	&.highlights-section {
+		display: grid;
+		grid-template-areas: "title"
+			"tabs-content"
+			"tabs";
+		min-height: 68rem;
+		padding: 1.8rem 0;
+		background-color: $Light_Yellow_bg_color;
+		position: relative;
+
+		h2 {
+			grid-area: title;
+			max-width: 26ch;
+		}
+
+		.highlights_content {
+			grid-area: tabs-content;
+			min-height: 32rem;
+			overflow: hidden;
+
+			.highlight_content {
+				display: none;
+				position: relative;
+
+				&.active {
+					display: block;
+				}
+
+				.article_featured {
+					width: 20rem;
+					display: block;
+					position: absolute;
+
+					&.featured_1 {
+						top: 0rem;
+						left: -1rem;
+					}
+
+					&.featured_2 {
+						top: 8rem;
+						left: 22rem;
+					}
+				}
+			}
+		}
+
+
+		.highlights-tabs {
+			grid-area: tabs;
+			display: flex;
+			flex-direction: column;
+			padding: 3.2rem 1.5rem;
+			gap: 1.6rem;
+
+			.highlight {
+				border: 1px solid rgba(224, 174, 22, 1);
+				border-radius: 2rem;
+				display: flex;
+				align-items: center;
+				gap: 1.2rem;
+				padding: 1.6rem;
+
+
+				&.active {
+					background-color: $white;
+				}
+
+				.highlight-text {
+					font-size: 1.4rem;
+				}
+
+				.highlight-image {
+					width: 3.2rem;
+				}
+			}
+		}
+	}
+
+	&.cta-challenge {
+		padding: 24rem 4.2rem;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+
+		&::before {
+			content: "";
+			position: absolute;
+			background: url(../assets/svg/dividers/highlights-bottom-mobile.svg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+			height: 4.2rem;
+			width: 100%;
+			top: 0;
+			z-index: 0;
+		}
+
+		.svg_dots {
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			z-index: 0;
+
+			svg {
+				transform: scale(1) translateX(1.5rem);
+			}
+		}
+
+		.svg-background {
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			z-index: -1;
+
+			svg {
+				transform: scale(1) translateX(1rem);
+			}
+		}
+
+		.cta_challenge_content {
+			text-align: center;
+			z-index: 1;
+			color: $white;
+			display: flex;
+			flex-direction: column;
+			gap: 1.6rem;
+
+			h2 {
+				color: $white;
+				font-size: clamp(2.8rem, 100%, 5.4rem);
+				font-weight: 700;
+				line-height: 130%;
+				margin: 0;
+			}
+
+			.subtitle {
+				color: $white;
+				line-height: 160%;
+			}
+
+			button {
+				align-self: center;
+			}
+		}
+	}
+
+	&.articles_background {
+		width: 100%;
+		overflow: hidden;
+		position: absolute;
+		z-index: -1;
+		transform: translateY(-17rem);
+
+		img {
+			max-width: 150%;
+		}
+	}
+
+	&.challenges-section {
+		padding: 6rem 1.5rem;
+
+		h2 {
+			margin-bottom: 2.4rem;
+			text-align: center;
+		}
+
+	}
+
+	&.articles-section {
+		padding: 6rem 0;
+
+		h2 {
+			text-align: center;
+		}
+
+		.articles_list {
+			gap: 2.4rem;
+			flex-wrap: nowrap;
+			overflow-y: auto;
+			padding: 0 1.5rem;
+			padding-bottom: 2.4rem;
+			scroll-snap-type: x;
+			scrollbar-width: none;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
+		}
+	}
+
+	&.newsletter-section {
+		padding: 6rem 1.5rem 12rem;
+	}
+}
+
+
+//Others
 .section-text {
 	display: flex;
 	flex-direction: column;
@@ -7,7 +321,6 @@
 
 	.main-title {
 		max-width: 10ch;
-		font-size: 6.4rem;
 		font-weight: 700;
 		line-height: 130%;
 		letter-spacing: 0.05rem;
@@ -22,286 +335,4 @@
 	width: 100%;
 	height: 100%;
 	background: $dark-grey;
-}
-
-section {
-	&.landing-first {
-		height: 100vh;
-
-		.section-text {
-			padding: 6rem;
-		}
-	}
-
-	&.landing-video {
-		background: url(../assets/images/landing_home.jpg);
-		background-size: cover;
-		background-color: $dark-grey;
-		height: 100vh;
-		position: relative;
-
-		&::after {
-			content: "";
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			bottom: 0;
-			z-index: 0;
-			background: linear-gradient(
-				180deg,
-				rgba(47, 49, 49, 0) 0%,
-				#2f31317c 100%
-			);
-		}
-
-		.section-text {
-			color: $white;
-			padding: 3rem 6rem;
-			justify-content: flex-end;
-			z-index: 2;
-		}
-	}
-
-	&.features-section {
-		padding: 20.8rem 0;
-
-		h2 {
-			margin-bottom: 4.8rem;
-			text-align: center;
-		}
-
-		.features-list {
-			.feature {
-				.feature-image {
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					width: 200px;
-					height: 200px;
-					border-radius: 100%;
-					margin: 0 auto;
-					margin-bottom: 2.4rem;
-				}
-
-				.feature-text {
-					text-align: center;
-					font-size: 1.8rem;
-					line-height: 125%;
-				}
-			}
-		}
-	}
-
-	&.highlights-section {
-		min-height: 68rem;
-		padding: 5.2rem 0 6.2rem;
-		background-color: $pastelSecondary;
-		position: relative;
-		align-items: stretch;
-
-		&::before {
-			content: "";
-			position: absolute;
-			background: url(../assets/svg/dividers/highlights-top.svg);
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-position: center;
-			height: 12.5rem;
-			width: 100%;
-			top: -12.5rem;
-			z-index: 0;
-		}
-
-		&::after {
-			content: "";
-			position: absolute;
-			background: url(../assets/svg/dividers/highlights-bottom.svg);
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-position: center;
-			height: 8.257rem;
-			width: 100%;
-			bottom: -8.257rem;
-			z-index: 0;
-		}
-
-		.highlights_content {
-			overflow: hidden;
-			.highlight_content {
-				display: none;
-				position: relative;
-
-				&.active {
-					display: block;
-				}
-
-				.article_featured {
-					position: absolute;
-					z-index: 9;
-
-					&.featured_1 {
-						top: 5.5rem;
-						left: 0rem;
-					}
-
-					&.featured_2 {
-						top: 15rem;
-						left: 34rem;
-					}
-				}
-			}
-		}
-
-		.tabs {
-			padding: 0 6rem;
-
-			h2 {
-				max-width: 26ch;
-				font-size: 3.2rem;
-				margin-bottom: 4.8rem;
-			}
-
-			.highlights-tabs {
-				display: flex;
-				flex-direction: column;
-				gap: 2.4rem;
-
-				.highlight {
-					border: 1px solid rgba(59, 61, 61, 1);
-					border-radius: 2rem;
-					display: flex;
-					align-items: center;
-					gap: 2rem;
-					padding: 2.4rem;
-					margin-left: 1.6rem;
-
-					&.active {
-						background-color: $white;
-					}
-
-					.highlight-image {
-						width: 5.6rem;
-						height: 5.6rem;
-						background-color: $dark-grey;
-						border-radius: 100%;
-					}
-				}
-			}
-		}
-	}
-
-	&.cta-challenge {
-		padding: 32.8rem 0;
-		position: relative;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
-		.svg_dots {
-			position: absolute;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			z-index: 0;
-			svg {
-				width: 100%;
-			}
-		}
-
-		.svg-background {
-			position: absolute;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			z-index: 0;
-			svg {
-				width: 100%;
-			}
-		}
-
-		.cta_challenge_content {
-			text-align: center;
-			z-index: 1;
-			color: $white;
-			display: flex;
-			flex-direction: column;
-			gap: 2.4rem;
-
-			h2 {
-				font-size: 5.4rem;
-			}
-
-			.subtitle {
-				font-size: 2.4rem;
-				margin-bottom: 2.4rem;
-			}
-
-			button {
-				cursor: pointer;
-				align-self: center;
-			}
-		}
-	}
-
-	&.challenges-section {
-		padding: 20.8rem 6rem;
-
-		h2 {
-			margin-bottom: 4.8rem;
-			text-align: center;
-		}
-
-		.challenge_list {
-			gap: 2.4rem;
-		}
-	}
-}
-
-.card_challenge {
-	padding: 0 !important;
-	border-radius: 2rem;
-	overflow: hidden;
-	align-items: stretch;
-	background-color: rgba(229, 245, 252, 1);
-
-	&_image {
-		width: 100%;
-		background-color: $dark-grey;
-		padding-top: 65%;
-	}
-
-	&_body {
-		display: flex;
-		flex-direction: column;
-		padding: 2.4rem;
-		gap: 2.4rem;
-
-		.categories {
-			display: flex;
-			gap: 0.8rem;
-
-			.category {
-				background: $white;
-				padding: 0.8rem 1.2rem;
-				border-radius: 50px;
-				font-size: 1.4rem;
-			}
-		}
-
-		.title {
-			font-family: "Libre Baskerville", serif;
-			color: rgba(0, 63, 90, 1);
-			font-size: 2.8rem;
-			font-weight: 700;
-			line-height: 130%;
-		}
-
-		.description {
-			color: $dark-grey;
-		}
-
-		button {
-			background-color: rgba(0, 94, 134, 1);
-		}
-	}
 }

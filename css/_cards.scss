@@ -1,0 +1,218 @@
+.card {
+	padding: 0;
+	border-radius: 2rem;
+	overflow: hidden;
+	align-items: stretch;
+	box-shadow: 0px 4px 10px rgba(59, 61, 61, 0.15);
+	display: flex;
+	flex-direction: column;
+}
+
+.card_challenge {
+	padding:11rem 2.4rem 2.4rem;
+	border-radius: 2rem;
+	overflow: hidden;
+	align-items: stretch;
+	background-color: $Medium_Blue_bg_color;
+	position: relative;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-size: contain;
+		background-repeat: no-repeat;
+		display: block;
+		z-index: 0;
+	}
+
+	&:nth-child(1n)::before {
+		background: url(../assets/svg/challenge_cards/lasso.svg);
+		width: 14.3rem;
+		height: 12.3rem;
+	}
+
+
+	&:nth-child(2n)::before {
+		background: url(../assets/svg/challenge_cards/dots.svg);
+		width: 25.9rem;
+		height: 12rem;
+	}
+
+	&:nth-child(3n)::before {
+		background: url(../assets/svg/challenge_cards/blob_1.svg);
+		width: 29.6rem;
+		height: 10.3rem;
+	}
+
+	&:nth-child(4n)::before {
+		background: url(../assets/svg/challenge_cards/line.svg);
+		width: 15.7rem;
+		height: 8.9rem;
+	}
+
+	&:nth-child(5n)::before {
+		background: url(../assets/svg/challenge_cards/blob_2.svg);
+		width: 33rem;
+		height: 13.3rem;
+	}
+
+	&.custom_challenge{
+		background-color: $Medium_Blue_CTA;
+
+		.share_challenge_link{
+			position: absolute;
+			top: 2.4rem;
+			right: 2.4rem
+		}
+
+		h4{
+			color: $white;
+		}
+
+		.description{
+			color: $white;
+		}
+
+		&::before{
+			background: url(../assets/svg/challenge_cards/custom.svg);
+			width: 28.7rem;
+			height: 19.7rem;
+		}
+	}
+
+
+	&:hover {
+		background-color: rgba(204, 235, 249, 1);
+
+		button {
+			background-color: rgba(255, 192, 0, 1);
+			border: 2px solid #003F5A;
+		}
+
+	}
+
+	&_body {
+		display: flex;
+		flex-direction: column;
+		gap: 2.4rem;
+		flex-grow: 1;
+		z-index: 1;
+
+		.categories_group {
+			display: flex;
+			flex-direction: column;
+			gap: 1.6rem;
+
+
+			.categories {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 1.6rem 0.8rem;
+
+				.category {
+					background: $white;
+					padding: 0.8rem 1.2rem;
+					border-radius: 50px;
+					font-size: 1.4rem;
+				}
+			}
+		}
+
+
+
+		.title {
+			font-family: "Libre Baskerville", serif;
+			color: rgba(0, 63, 90, 1);
+			font-size: 2.8rem;
+			font-weight: 700;
+			line-height: 130%;
+		}
+
+		.description {
+			color: $dark-grey;
+		}
+
+		button {
+			@include challenge-mobile;
+		}
+	}
+}
+
+.card_article {
+	background-color: $Medium_Yellow_details_bg;
+	min-width: 25.5rem;
+	padding: 0;
+	scroll-snap-align: center;
+
+	&:hover {
+		background-color: $Medium_Yellow_details_bg;
+	}
+
+	&_image {
+		width: 100%;
+		background-color: $dark-grey;
+		padding-top: 65%;
+		background-size: cover;
+	}
+
+	&:nth-child(1n) {
+		.card_article_image {
+			background: url(../assets/images/articles/article_1.jpg);
+		}
+	}
+
+	&:nth-child(2n) {
+		.card_article_image {
+			background: url(../assets/images/articles/article_2.jpg);
+		}
+	}
+
+	&:nth-child(3n) {
+		.card_article_image {
+			background: url(../assets/images/articles/article_3.jpg);
+		}
+	}
+
+	&:nth-child(4n) {
+		.card_article_image {
+			background: url(../assets/images/articles/article_4.jpg);
+		}
+	}
+
+	.card_articles_body {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 2.4rem;
+		gap: 2.4rem;
+		min-height: 16.5rem;
+		flex-grow: 1;
+
+
+		.title {
+			font-family: "Libre Baskerville", serif;
+			color: rgba(0, 63, 90, 1);
+			font-size: 1.6rem;
+			font-weight: 700;
+			line-height: 130%;
+		}
+
+		.description {
+			color: $darker-grey;
+		}
+
+		.categories {
+			display: flex;
+			gap: 0.8rem;
+
+			.category {
+				background: $white;
+				padding: 0.8rem 1.2rem;
+				border-radius: 50px;
+				font-size: 1.4rem;
+			}
+		}
+	}
+}

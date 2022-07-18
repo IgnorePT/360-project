@@ -1,0 +1,42 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    padding: 4rem 0 12rem;
+    background: $Medium_Blue_bg_color;
+
+    &:after{
+        content: '';
+            position: absolute;
+			background: url(../assets/svg/footer.svg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+			height: 8.4rem;
+			width: 100%;
+			bottom: 0;
+			left: 0;
+			z-index: 0;
+            text-align: center;
+    }
+
+    .footer_logo{
+        
+        margin: 0 auto;
+        margin-bottom: 4.4rem;
+    }
+
+    .footer_menu{
+        text-align: center;
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap: 2.4rem;
+
+            li{
+                color: $Darker_Blue_text;
+            }
+        }
+    }
+}

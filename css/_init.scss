@@ -1,4 +1,4 @@
-* {
+*, *::before, *::after {
 	box-sizing: border-box;
 }
 
@@ -16,6 +16,7 @@ h4,
 h5,
 h6,
 button {
+	color: $darker-grey;
 	font-size: 1.6rem;
 	font-family: "Poppins", sans-serif;
 }
@@ -24,14 +25,50 @@ button {
 	font-weight: 500;
 }
 
-h1 {
-	font-size: 6.4rem;
-	font-weight: bold;
+a{
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
 	font-family: "Libre Baskerville", serif;
+	color: $Darker_Blue_text;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: clamp(3.2rem, 100%, 6.4rem);
+	line-height: 140%;
+	margin-bottom: 2.4rem;
 }
 
 h2 {
-	font-size: 4.8rem;
+	font-size: clamp(2rem, 100%, 4.8rem);
+	color: $Darker_Blue_text;
+	line-height: 130%;
 	font-weight: bold;
-	font-family: "Libre Baskerville", serif;
+}
+
+.mobile {
+	display: block;
+}
+
+.desktop {
+	display: none;
+}
+
+@media screen and (min-width: 76.8rem) {
+	.mobile {
+		display: none;
+	}
+
+	.desktop {
+		display: none;
+	}
+}
+
+.hidden{
+	display: none;
 }

@@ -1,17 +1,58 @@
 button {
-	padding: 12px 20px;
+	padding: 0.8rem 2.4rem;
 	color: $white;
 	border: none;
 	background-color: $darker-grey;
 	border-radius: 20px;
 	font-weight: 500;
+	cursor: pointer;
+
+	@media screen and (min-width: 76.7){
+		padding: 1.2rem 2rem;
+	}
 
 	&.primary {
-		background-color: $primary;
-		color: $text-dark;
+		display: inline-block;
+		background-color: $Brand_Blue_bg_color;
+		color: $white;
+		border: 0.2rem solid $Darker_Blue_text;
+		border-radius: 3rem;
+		box-shadow: 0px 4px 10px rgba(59, 61, 61, 0.2);
 	}
 
 	&.secondary {
 		background-color: $secondary;
 	}
+
+	&.newsletter{
+		padding: 1rem 2.4rem;
+		align-self: flex-start;
+		z-index: 1;
+	}
+
+	&.challenge {
+		background-color: rgba(0, 94, 134, 1);
+		box-shadow: 0.4rem 0.6rem 0rem $Darker_Blue_text;
+		border: 0.2rem solid $Darker_Blue_text;
+		border-radius: 3rem;
+
+		&:hover{
+			background-color: rgba(255, 192, 0, 1);
+            border-color: $Darker_Blue_text;
+		}
+
+		&_secondary{
+			color: $Darker_Blue_text;
+			background-color: $Yellow_CTA;
+            border-color: $Darker_Blue_text;
+		}
+	}
+}
+
+@mixin challenge-mobile{
+	box-shadow: 0.4rem 0.6rem 0rem $Darker_Blue_text;
+	border: 0.2rem solid;
+	color: $Darker_Blue_text;
+	background-color: $Yellow_CTA;
+	border-color: $Darker_Blue_text;
 }
