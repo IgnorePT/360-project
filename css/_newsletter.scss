@@ -10,6 +10,7 @@
 
     &:nth-child(2){
         overflow: visible;
+        padding: 0 3.9rem;
     }
 
     :before{
@@ -54,6 +55,7 @@
     height: auto;
     opacity: 1;
     transition: all 1s ease-in;
+    z-index: 1;
     
 }
 
@@ -76,6 +78,7 @@
     h5 {
         color: $Brand_Grey_text_onlightbg;
         font-size: 1.4rem;
+        line-height: 140%;
         margin-bottom: 0.8rem;
     }
     .form-group{
@@ -87,6 +90,13 @@
         right: 0;
         transform: translateY(-5rem);
         z-index: 0;
+    }
+
+    img.swirl {
+        position: absolute;
+        bottom: 0;
+        right: 3rem;
+        z-index: -1;
     }
 
     input,

@@ -27,6 +27,7 @@ button {
 	&.newsletter{
 		padding: 1rem 2.4rem;
 		align-self: flex-start;
+		z-index: 1;
 	}
 
 	&.challenge {

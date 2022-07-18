@@ -699,6 +699,7 @@ button.newsletter {
   padding: 1rem 2.4rem;
   -ms-flex-item-align: start;
       align-self: flex-start;
+  z-index: 1;
 }
 
 button.challenge {
@@ -978,7 +979,7 @@ footer {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  padding: 4rem 0 6rem;
+  padding: 4rem 0 12rem;
   background: #CCEBF9;
 }
 
@@ -1436,6 +1437,7 @@ section.newsletter-section {
 
 .newsletter-container:nth-child(2) {
   overflow: visible;
+  padding: 0 3.9rem;
 }
 
 .newsletter-container :before {
@@ -1484,6 +1486,7 @@ section.newsletter-section {
   opacity: 1;
   -webkit-transition: all 1s ease-in;
   transition: all 1s ease-in;
+  z-index: 1;
 }
 
 .form-none {
@@ -1512,6 +1515,7 @@ section.newsletter-section {
 #subscribe-newsletter h5 {
   color: #3B3D3D;
   font-size: 1.4rem;
+  line-height: 140%;
   margin-bottom: 0.8rem;
 }
 
@@ -1525,6 +1529,13 @@ section.newsletter-section {
   -webkit-transform: translateY(-5rem);
           transform: translateY(-5rem);
   z-index: 0;
+}
+
+#subscribe-newsletter img.swirl {
+  position: absolute;
+  bottom: 0;
+  right: 3rem;
+  z-index: -1;
 }
 
 #subscribe-newsletter input,
