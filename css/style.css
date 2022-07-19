@@ -662,7 +662,7 @@ h2 {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 button {
@@ -692,7 +692,17 @@ button.primary {
 }
 
 button.secondary {
-  background-color: #009de0;
+  -webkit-box-shadow: 0.4rem 0.6rem 0rem #003F5A;
+          box-shadow: 0.4rem 0.6rem 0rem #003F5A;
+  border: 0.2rem solid;
+  color: #003F5A;
+  background-color: #FFC000;
+  border-color: #003F5A;
+}
+
+button.secondary:disabled {
+  cursor: not-allowed;
+  background-color: #F9EFD0;
 }
 
 button.newsletter {
@@ -1756,5 +1766,252 @@ section.newsletter-section {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 2.4rem;
+}
+
+.challenge-game {
+  background: #005E86;
+  min-height: 100vh;
+}
+
+.challenge-game .choose_ciclo {
+  padding: 3.2rem 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
+.challenge-game .choose_ciclo .options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.4rem;
+  width: 100%;
+}
+
+.challenge-game .choose_ciclo .options .option {
+  padding: 1.6rem 2.4rem;
+  background: #F9EFD0;
+  color: #003F5A;
+  border: 0.2rem solid #ffffff;
+  border-radius: 20rem;
+}
+
+.challenge-game .choose_ciclo .options .option.active {
+  background: #FFC000;
+  border-color: #003F5A;
+}
+
+.challenge-game .quiz-header {
+  width: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4rem;
+}
+
+.challenge-game .quiz-header h3 {
+  color: #ffffff;
+  font-family: 'Poppins';
+  font-size: 2rem;
+  line-height: 155%;
+  font-weight: 500;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  max-width: 75%;
+  text-align: center;
+}
+
+.challenge-game .close-challenge {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  background: #003F5A;
+  width: 4.4rem;
+  height: 4.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+}
+
+.challenge-game .challenge-question {
+  padding: 3.2rem 1.5rem;
+  color: #ffffff;
+}
+
+.challenge-game .challenge-question .question-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 4.2rem;
+}
+
+.challenge-game .challenge-question .question-header .question_header_icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.6rem;
+}
+
+.challenge-game .challenge-question .question-header .question_number .question_number_text {
+  font-size: 1.4rem;
+  line-height: 140%;
+}
+
+.challenge-game .challenge-question .question-header .question_number .question_dots .dot {
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: #ffffff;
+  border-radius: 100%;
+}
+
+.challenge-game .challenge-question .question-header .question_number .question_dots .dot.active {
+  background-color: #FFC000;
+}
+
+.challenge-game .challenge-question .challenge-information {
+  text-align: center;
+  margin-bottom: 4.2rem;
+}
+
+.challenge-game .challenge-question .challenge-information .subtitle {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.challenge-game .challenge-question .challenge-information .title {
+  font-size: 2rem;
+  line-height: 155%;
+  font-weight: 500;
+  font-family: 'Poppins';
+  max-width: 75%;
+  text-align: center;
+  margin: 0 auto;
+  color: #ffffff;
+}
+
+.challenge-game .challenge-question .image-game {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+}
+
+.challenge-game .challenge-question .image-game .image {
+  -ms-grid-column-align: stretch;
+      justify-self: stretch;
+}
+
+.challenge-game .challenge-question .image-game .image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.challenge-game .result {
+  padding: 3.2rem 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+
+.challenge-game .result .result_title {
+  font-family: "Libre Baskerville", serif;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 2.8rem;
+  margin-bottom: 3.2rem;
+}
+
+.challenge-game .result .solution {
+  color: #ffffff;
+}
+
+.challenge-game .result .solution img {
+  z-index: 0;
+}
+
+.challenge-game .result .solution span {
+  display: block;
+  max-width: 80%;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #003F5A;
+  position: relative;
+  background: #CCEBF9;
+  border-radius: 3rem;
+  padding: 1.2rem 2.4rem;
+  margin-top: -4rem;
+  margin-bottom: 2.4rem;
+  z-index: 1;
+}
+
+.challenge-game .result .solution p {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 160%;
+  margin-bottom: 3.2rem;
+}
+
+.challenge-game .result .solution a {
+  display: block;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 160%;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  margin-bottom: 5.6rem;
 }
 /*# sourceMappingURL=style.css.map */

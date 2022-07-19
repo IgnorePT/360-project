@@ -1,0 +1,211 @@
+.challenge-game {
+    background: $Medium_Blue_CTA;
+    min-height: 100vh;
+
+    .choose_ciclo {
+        padding: 3.2rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 2.4rem;
+            width: 100%;
+
+            .option {
+                padding: 1.6rem 2.4rem;
+                background: $Light_Yellow_bg_color;
+                color: $Darker_Blue_text;
+                border: 0.2rem solid $white;
+                border-radius: 20rem;
+
+                &.active {
+                    background: $Yellow_CTA;
+                    border-color: $Darker_Blue_text;
+                }
+            }
+        }
+    }
+
+    .quiz-header {
+        width: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+
+
+
+        h3 {
+            color: $white;
+            font-family: 'Poppins';
+            font-size: 2rem;
+            line-height: 155%;
+            font-weight: 500;
+            align-self: center;
+            max-width: 75%;
+            text-align: center;
+        }
+    }
+
+    .close-challenge {
+        align-self: flex-end;
+        background: $Darker_Blue_text;
+        width: 4.4rem;
+        height: 4.4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+
+    .challenge-question {
+        padding: 3.2rem 1.5rem;
+        color: $white;
+
+        .question-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 4.2rem;
+
+
+            .question_header_icons {
+                display: flex;
+                gap: 1.6rem;
+            }
+
+            .question_number {
+
+                .question_number_text {
+                    font-size: 1.4rem;
+                    line-height: 140%;
+                }
+
+                .question_dots {
+                    .dot {
+                        display: inline-block;
+                        width: 0.8rem;
+                        height: 0.8rem;
+                        background-color: $white;
+                        border-radius: 100%;
+
+                        &.active {
+                            background-color: $Yellow_CTA;
+                        }
+                    }
+                }
+            }
+        }
+
+        .challenge-information {
+            text-align: center;
+            margin-bottom: 4.2rem;
+
+            .subtitle {
+                color: $white;
+                font-size: 1.2rem;
+                margin-bottom: 0.8rem;
+            }
+
+            .title {
+                font-size: 2rem;
+                line-height: 155%;
+                font-weight: 500;
+                font-family: 'Poppins';
+                max-width: 75%;
+                text-align: center;
+                margin: 0 auto;
+                color: $white;
+            }
+        }
+
+        .image-game {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+
+            .image {
+                justify-self: stretch;
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .result {
+        padding: 3.2rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        text-align: center;
+
+        .result_title {
+            font-family: "Libre Baskerville", serif;
+            color: $white;
+            font-weight: 700;
+            font-size: 2.8rem;
+            margin-bottom: 3.2rem;
+        }
+
+        .solution {
+            color: $white;
+
+            img {
+                z-index: 0;
+            }
+
+            span {
+                display: block;
+                max-width: 80%;
+                margin: 0 auto;
+                font-size: 1.6rem;
+                font-weight: 500;
+                color: $Darker_Blue_text;
+                position: relative;
+
+
+                background: $Medium_Blue_bg_color;
+                border-radius: 3rem;
+                padding: 1.2rem 2.4rem;
+
+                margin-top: -4rem;
+                margin-bottom: 2.4rem;
+                z-index: 1;
+            }
+
+            p {
+                color: $white;
+                font-weight: 400;
+                font-size: 1.6rem;
+                line-height: 160%;
+                margin-bottom: 3.2rem;
+            }
+
+            a {
+                display: block;
+                color: $white;
+                font-weight: 500;
+                font-size: 1.6rem;
+                line-height: 160%;
+                text-decoration-line: underline;
+
+                margin-bottom: 5.6rem;
+            }
+        }
+    }
+
+
+}

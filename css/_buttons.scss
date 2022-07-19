@@ -1,3 +1,11 @@
+@mixin challenge-mobile{
+	box-shadow: 0.4rem 0.6rem 0rem $Darker_Blue_text;
+	border: 0.2rem solid;
+	color: $Darker_Blue_text;
+	background-color: $Yellow_CTA;
+	border-color: $Darker_Blue_text;
+}
+
 button {
 	padding: 0.8rem 2.4rem;
 	color: $white;
@@ -21,7 +29,12 @@ button {
 	}
 
 	&.secondary {
-		background-color: $secondary;
+		@include challenge-mobile;
+
+		&:disabled{
+			cursor: not-allowed;
+			background-color: $Light_Yellow_bg_color;
+		}
 	}
 
 	&.newsletter{
@@ -47,12 +60,4 @@ button {
             border-color: $Darker_Blue_text;
 		}
 	}
-}
-
-@mixin challenge-mobile{
-	box-shadow: 0.4rem 0.6rem 0rem $Darker_Blue_text;
-	border: 0.2rem solid;
-	color: $Darker_Blue_text;
-	background-color: $Yellow_CTA;
-	border-color: $Darker_Blue_text;
 }
