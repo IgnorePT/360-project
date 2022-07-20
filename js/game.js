@@ -124,7 +124,14 @@ function GameQuiz() {
 
                 setTimeout(function () {
                     hideSectionById("question_2");
+                    showSectinById("question_2_bg");
                     showSectinById("result_2");
+
+                    gsap.from("#question_2_bg", {
+                        opacity: 0,
+                        duration: 0.8,
+                        ease: "power2.out",
+                    });
 
                     gsap.from("#result_2", {
                         opacity: 0,
@@ -186,8 +193,26 @@ function pairGame() {
 }
 
 function finishGame() {
-    hideSectionById("question_3");
-    showSectinById("result_final");
+
+    gsap.to("#question_3", {
+        opacity: 0,
+        duration: 0.8,
+        scale: 0.8,
+        ease: "power2.out",
+    });
+
+    setTimeout(function () {
+        hideSectionById("question_3");
+        showSectinById("result_final");
+
+        gsap.from("#result_final", {
+            opacity: 0,
+            duration: 0.8,
+            scale: 0.8,
+            ease: "power2.out",
+        });
+    })
+
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -256,7 +281,6 @@ function LoadPairGame() {
         .addEventListener("click", function () {
             pairGame();
 
-
             gsap.to("#result_2", {
                 opacity: 0,
                 duration: 0.8,
@@ -267,7 +291,6 @@ function LoadPairGame() {
             gsap.to("#question_2_bg", {
                 opacity: 0,
                 duration: 0.8,
-                y: -50,
                 ease: "power2.out",
             });
 
@@ -275,6 +298,14 @@ function LoadPairGame() {
 
                 hideSectionById("result_2");
                 showSectinById("question_3");
+                showSectinById("question_3_bg");
+
+
+                gsap.from("#question_3_bg", {
+                    opacity: 0,
+                    duration: 0.1,
+                    ease: "power2.out",
+                });
 
                 gsap.from("#question_3", {
                     opacity: 0,
