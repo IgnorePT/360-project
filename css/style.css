@@ -1815,12 +1815,33 @@ section.newsletter-section {
   position: absolute;
 }
 
-.game-background .big-shape {
+.game-background .initial-screen {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.game-background .initial-screen > .big-shape {
   top: -9rem;
   left: -20rem;
 }
 
-.game-background .dots {
+.game-background .initial-screen > .dots {
+  top: -7rem;
+  left: 6rem;
+}
+
+.game-background .first-screen > .big-shape.bottom {
+  bottom: 0;
+  right: -5rem;
+}
+
+.game-background .first-screen > .big-shape.top {
+  top: -9rem;
+  left: -20rem;
+}
+
+.game-background .first-screen > .dots {
   top: -7rem;
   left: 6rem;
 }

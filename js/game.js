@@ -18,6 +18,9 @@ function chooseCiclo() {
 function firstChallenge() {
     console.log('First Challenge')
 
+    gsap.from('#question_1', {opacity: 0, duration: 0.8, y: 50, ease: "power2.out"})
+    gsap.from('.game-background .first_screen',{opacity: 0, duration: 1, ease: "power2.out"})
+    
     document
         .querySelectorAll('#question_1 > .image-game > .image')
         .forEach(function (image) {
@@ -26,14 +29,21 @@ function firstChallenge() {
                 let title = isSolution ? 'Excelente!' : 'Resposta errada!'
 
                 document.querySelector('#result_1 .result_title').innerText = title
+                gsap.to('#question_1', {opacity: 0, duration: 0.8, scale: 0.8, ease: "power2.out"})
+                
                 if (isSolution) {
                     console.log('Right')
                 } else {
                     console.log('Wrong')
                 }
 
-                hideSectionById('question_1')
-                showSectinById('result_1')
+                
+                setTimeout(function(){
+                    hideSectionById('question_1')
+                    showSectinById('result_1')
+                    gsap.from('#result_1', {opacity: 0, duration: 0.8, scale: 0.8, ease: "power2.out"})
+                }, 1200)
+            
             })
         })
 }
@@ -118,15 +128,21 @@ function showSectinById(id) {
 }
 
 function initChallenge() {
-    hideSectionById('ciclo-section')
-    showSectinById('question_1')
 
-    firstChallenge()
+    gsap.to('#ciclo-section', {opacity: 0, duration: 1, y: -50, ease: "power2.out"})
+    gsap.to('.game-background .initial_screen',{opacity: 0, duration: 1, ease: "power2.out"})
+    
+    setTimeout(function(){
+        hideSectionById('ciclo-section')
+        showSectinById('question_1')
+
+        firstChallenge()
+    },1000)
 }
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    gsap.from('#ciclo-section', {opacity: 0, duration: 1, y: 50, stagger: 1, ease: "power2.out"})
+    gsap.from('#ciclo-section', {opacity: 0, duration: 1, y: 50, ease: "power2.out"})
 
     document.querySelectorAll('.option').forEach((btn) => {
         btn.addEventListener('click', chooseCiclo)
