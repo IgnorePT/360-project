@@ -15,12 +15,12 @@
         height: 100%;
         position: absolute;
 
-        > .big-shape {
+        >.big-shape {
             top: -9rem;
             left: -20rem;
         }
 
-        > .dots {
+        >.dots {
             top: -7rem;
             left: 6rem;
         }
@@ -28,21 +28,21 @@
 
 
     .first-screen {
-        > .big-shape {
+        >.big-shape {
             &.bottom {
-                bottom: 0;
-                right: -5rem;
+                bottom: -45rem;
+                right: -25rem;
             }
 
             &.top {
-                top: -9rem;
-                left: -20rem;
+                top: -19rem;
+                left: -30rem;
             }
         }
 
-        > .dots {
-            top: -7rem;
-            left: 6rem;
+        >.dots {
+            top: -15rem;
+            left: -25rem;
         }
     }
 }

@@ -1832,18 +1832,18 @@ section.newsletter-section {
 }
 
 .game-background .first-screen > .big-shape.bottom {
-  bottom: 0;
-  right: -5rem;
+  bottom: -45rem;
+  right: -25rem;
 }
 
 .game-background .first-screen > .big-shape.top {
-  top: -9rem;
-  left: -20rem;
+  top: -19rem;
+  left: -30rem;
 }
 
 .game-background .first-screen > .dots {
-  top: -7rem;
-  left: 6rem;
+  top: -15rem;
+  left: -25rem;
 }
 
 body.game {
@@ -1975,7 +1975,6 @@ body.game {
   font-size: 2rem;
   line-height: 155%;
   font-weight: 500;
-  font-family: 'Poppins';
   max-width: 75%;
   text-align: center;
   margin: 0 auto;
