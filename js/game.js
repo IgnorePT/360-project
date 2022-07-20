@@ -115,8 +115,26 @@ function GameQuiz() {
                     console.log("Animate Wrong");
                 }
 
-                hideSectionById("question_2");
-                showSectinById("result_2");
+                gsap.to("#question_2", {
+                    opacity: 0,
+                    duration: 0.8,
+                    scale: 0.8,
+                    ease: "power2.out",
+                });
+
+                setTimeout(function () {
+                    hideSectionById("question_2");
+                    showSectinById("result_2");
+
+                    gsap.from("#result_2", {
+                        opacity: 0,
+                        duration: 0.8,
+                        scale: 0.8,
+                        ease: "power2.out",
+                    });
+                }, 800)
+
+
             });
         });
 }
@@ -236,10 +254,36 @@ function LoadPairGame() {
     document
         .getElementById("next_challenge_last")
         .addEventListener("click", function () {
-
-            gsap
             pairGame();
-            hideSectionById("result_2");
-            showSectinById("question_3");
+
+
+            gsap.to("#result_2", {
+                opacity: 0,
+                duration: 0.8,
+                y: -50,
+                ease: "power2.out",
+            });
+
+            gsap.to("#question_2_bg", {
+                opacity: 0,
+                duration: 0.8,
+                y: -50,
+                ease: "power2.out",
+            });
+
+            setTimeout(function () {
+
+                hideSectionById("result_2");
+                showSectinById("question_3");
+
+                gsap.from("#question_3", {
+                    opacity: 0,
+                    duration: 1,
+                    y: 50,
+                    ease: "power2.out",
+                });
+            }, 800)
+
+
         });
 }
