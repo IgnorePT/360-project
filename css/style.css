@@ -1345,19 +1345,6 @@ section.cta-challenge {
   overflow: hidden;
 }
 
-section.cta-challenge::before {
-  content: "";
-  position: absolute;
-  background: url(../assets/svg/dividers/highlights-bottom-mobile.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 4.2rem;
-  width: 100%;
-  top: 0;
-  z-index: 0;
-}
-
 section.cta-challenge .svg_dots {
   position: absolute;
   display: -webkit-box;
@@ -1423,7 +1410,8 @@ section.cta-challenge .cta_challenge_content .subtitle {
   line-height: 160%;
 }
 
-section.cta-challenge .cta_challenge_content button, section.cta-challenge .cta_challenge_content a {
+section.cta-challenge .cta_challenge_content button,
+section.cta-challenge .cta_challenge_content a {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -1434,8 +1422,8 @@ section.articles_background {
   overflow: hidden;
   position: absolute;
   z-index: -1;
-  -webkit-transform: translateY(-17rem);
-          transform: translateY(-17rem);
+  -webkit-transform: translateY(10rem);
+          transform: translateY(10rem);
 }
 
 section.articles_background img {
@@ -1443,12 +1431,28 @@ section.articles_background img {
 }
 
 section.challenges-section {
-  padding: 6rem 1.5rem;
+  padding: 12rem 1.5rem 6rem;
+  width: 100%;
 }
 
 section.challenges-section h2 {
   margin-bottom: 2.4rem;
   text-align: center;
+}
+
+section.challenges-section::before {
+  content: "";
+  position: absolute;
+  background: url(../assets/svg/dividers/highlights-bottom-mobile.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 4.2rem;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
 }
 
 section.articles-section {

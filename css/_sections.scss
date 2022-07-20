@@ -19,7 +19,7 @@ section {
 	&.landing-video {
 		height: 100vh;
 
-		.cover_video{
+		.cover_video {
 			position: absolute;
 			object-fit: cover;
 			width: 100%;
@@ -201,18 +201,7 @@ section {
 		justify-content: center;
 		overflow: hidden;
 
-		&::before {
-			content: "";
-			position: absolute;
-			background: url(../assets/svg/dividers/highlights-bottom-mobile.svg);
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-position: center center;
-			height: 4.2rem;
-			width: 100%;
-			top: 0;
-			z-index: 0;
-		}
+
 
 		.svg_dots {
 			position: absolute;
@@ -259,7 +248,8 @@ section {
 				line-height: 160%;
 			}
 
-			button, a {
+			button,
+			a {
 				align-self: center;
 			}
 		}
@@ -270,19 +260,37 @@ section {
 		overflow: hidden;
 		position: absolute;
 		z-index: -1;
-		transform: translateY(-17rem);
+		transform: translateY(10rem);
 
 		img {
 			max-width: 150%;
 		}
+
 	}
 
 	&.challenges-section {
-		padding: 6rem 1.5rem;
+		padding: 12rem 1.5rem 6rem;
+		width: 100%;
 
 		h2 {
 			margin-bottom: 2.4rem;
 			text-align: center;
+		}
+
+
+		&::before {
+			content: "";
+			position: absolute;
+			background: url(../assets/svg/dividers/highlights-bottom-mobile.svg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+			height: 4.2rem;
+			width: 100vw;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 0;
 		}
 
 	}
