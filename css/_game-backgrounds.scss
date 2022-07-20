@@ -1,0 +1,22 @@
+.game-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .big-shape,
+    .dots {
+        position: absolute;
+       
+    }
+
+    .big-shape{
+        top: -9rem;
+        left:  -20rem;
+    }
+
+    .dots{
+        top: -7rem;
+        left: 6rem;
+    }
+}

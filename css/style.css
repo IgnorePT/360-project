@@ -665,6 +665,22 @@ h2 {
   display: none !important;
 }
 
+.z-1 {
+  z-index: -1;
+}
+
+.z0 {
+  z-index: 0;
+}
+
+.z1 {
+  z-index: 1;
+}
+
+.z10 {
+  z-index: 10;
+}
+
 button,
 a.btn {
   padding: 0.8rem 2.4rem;
@@ -1783,9 +1799,37 @@ section.newsletter-section {
   gap: 2.4rem;
 }
 
+.game-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.game-background .big-shape,
+.game-background .dots {
+  position: absolute;
+}
+
+.game-background .big-shape {
+  top: -9rem;
+  left: -20rem;
+}
+
+.game-background .dots {
+  top: -7rem;
+  left: 6rem;
+}
+
+body {
+  background: #005E86;
+}
+
 .challenge-game {
   background: #005E86;
   min-height: 100vh;
+  z-index: 1;
+  overflow: hidden;
 }
 
 .challenge-game .choose_ciclo {
@@ -1821,7 +1865,6 @@ section.newsletter-section {
 
 .challenge-game .quiz-header h3 {
   color: #ffffff;
-  font-family: 'Poppins';
   font-size: 2rem;
   line-height: 155%;
   font-weight: 500;

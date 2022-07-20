@@ -4,7 +4,6 @@ var attemptsOnPairGame = 0;
 var pairsCompleted = 0;
 
 
-
 function chooseCiclo() {
     var optionActive = document.querySelector('.option:not(.pair).active')
 
@@ -63,7 +62,6 @@ function secondChallenge() {
 }
 
 function lastChallenge() {
-    console.log("This is the Last Challenge");
 
     document.querySelectorAll('#question_3 > .select_pairs > .options > .option').forEach(function (btn) {
         btn.addEventListener('click', function (e) {
@@ -127,6 +125,9 @@ function initChallenge() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+
+    gsap.from('#ciclo-section', {opacity: 0, duration: 1, y: 50, stagger: 1, ease: "power2.out"})
+
     document.querySelectorAll('.option').forEach((btn) => {
         btn.addEventListener('click', chooseCiclo)
     })
