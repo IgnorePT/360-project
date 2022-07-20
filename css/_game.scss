@@ -1,5 +1,7 @@
 body{
-    background: $Medium_Blue_CTA;
+    &.game{
+        background: $Medium_Blue_CTA;
+    }
 }
 
 .challenge-game {
