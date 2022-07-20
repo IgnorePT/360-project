@@ -1,41 +1,115 @@
-
 var initGame = document.getElementById('init_game');
+var pairGameTemp = 0;
+var attemptsOnPairGame = 0;
+var pairsCompleted = 0;
+
 
 
 function chooseCiclo() {
-    var optionActive = document.querySelector('.option.active');
+    var optionActive = document.querySelector('.option:not(.pair).active')
 
     if (optionActive) {
-        optionActive.classList.remove('active');
+        optionActive.classList.remove('active')
     }
 
-    this.classList.add('active');
-    initGame.disabled = false;
+    this.classList.toggle('active')
+    initGame.disabled = false
 }
 
 function firstChallenge() {
-    console.log("First Challenge");
+    console.log('First Challenge')
 
-    document.querySelectorAll('#question_1 > .image-game > .image').forEach(function (image) {
-        image.addEventListener('click',
-            function () {
-                let isSolution = (this.dataset.solution === 'true');
-                let title = (isSolution) ? "Excelente!" : "Resposta errada!";
+    document
+        .querySelectorAll('#question_1 > .image-game > .image')
+        .forEach(function (image) {
+            image.addEventListener('click', function () {
+                let isSolution = this.dataset.solution === 'true'
+                let title = isSolution ? 'Excelente!' : 'Resposta errada!'
 
-                document.querySelector("#result_1 .result_title").innerText = title;
-                if(isSolution){
-                    console.log("Right");
+                document.querySelector('#result_1 .result_title').innerText = title
+                if (isSolution) {
+                    console.log('Right')
                 } else {
-                    console.log("Wrong");
+                    console.log('Wrong')
                 }
 
-                hideSectionById('question_1');
-                showSectinById('result_1');
+                hideSectionById('question_1')
+                showSectinById('result_1')
             })
+        })
+}
 
+function secondChallenge() {
+    console.log('Second Challenge')
+
+    document
+        .querySelectorAll('#question_2 > .multiple_question > .options > .option')
+        .forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                let isSolution = this.dataset.solution === 'true'
+                let title = isSolution ? 'Excelente!' : 'Resposta errada!'
+
+                document.querySelector('#result_2 .result_title').innerText = title
+                if (isSolution) {
+                    console.log('Animate Right')
+                } else {
+                    console.log('Animate Wrong')
+                }
+
+                hideSectionById('question_2')
+                showSectinById('result_2')
+            })
+        })
+}
+
+function lastChallenge() {
+    console.log("This is the Last Challenge");
+
+    document.querySelectorAll('#question_3 > .select_pairs > .options > .option').forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+            if (!pairGameTemp) {
+                return pairGameTemp = this.dataset.pair;
+            }
+
+            if (pairGameTemp === this.dataset.pair) {
+                const selectedPair = document.querySelectorAll("[data-pair]");
+
+                const filteredpair = Array.from(selectedPair).filter(el => el.dataset.pair == pairGameTemp)
+
+                Array.from(filteredpair).forEach(function (el) {
+                    el.style.visibility = "hidden";
+                    el.style.pointerEvents = "none";
+                })
+                pairGameTemp = 0;
+                pairsCompleted++
+
+            } else {
+                if (attemptsOnPairGame >= 4) {
+                    console.log("Jogo dos Pares Completo - Erro!");
+                    finishGame();
+                }
+
+                Array.from(document.querySelectorAll("[data-pair]")).forEach(function (el) {
+                    el.classList.remove('active');
+                })
+
+                pairGameTemp = 0;
+                attemptsOnPairGame++
+            }
+
+            if (pairsCompleted === 4) {
+                console.log("Jogo dos Pares Completo - Sucerro");
+                finishGame();
+            }
+
+        })
     })
 }
 
+function finishGame(){
+    hideSectionById('question_3')
+    showSectinById('result_final')
+}
 
 function hideSectionById(id) {
     document.getElementById(id).classList.add('hidden')
@@ -46,21 +120,28 @@ function showSectinById(id) {
 }
 
 function initChallenge() {
-    hideSectionById('ciclo-section');
-    showSectinById('question_1');
+    hideSectionById('ciclo-section')
+    showSectinById('question_1')
 
-    firstChallenge();
+    firstChallenge()
 }
 
-
-
-document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll('.option').forEach(btn => {
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.option').forEach((btn) => {
         btn.addEventListener('click', chooseCiclo)
-    });
+    })
 
-    initGame.addEventListener('click', initChallenge);
+    initGame.addEventListener('click', initChallenge)
+
+    document.getElementById('next_challenge').addEventListener("click", function () {
+        secondChallenge()
+        hideSectionById('result_1')
+        showSectinById('question_2')
+    })
+
+    document.getElementById('next_challenge_last').addEventListener("click", function () {
+        lastChallenge()
+        hideSectionById('result_2')
+        showSectinById('question_3')
+    })
 })
-
-
-

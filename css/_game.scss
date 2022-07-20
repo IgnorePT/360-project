@@ -11,25 +11,7 @@
         justify-content: space-between;
         height: 100%;
 
-        .options {
-            display: flex;
-            flex-direction: column;
-            gap: 2.4rem;
-            width: 100%;
 
-            .option {
-                padding: 1.6rem 2.4rem;
-                background: $Light_Yellow_bg_color;
-                color: $Darker_Blue_text;
-                border: 0.2rem solid $white;
-                border-radius: 20rem;
-
-                &.active {
-                    background: $Yellow_CTA;
-                    border-color: $Darker_Blue_text;
-                }
-            }
-        }
     }
 
     .quiz-header {
@@ -157,13 +139,17 @@
             color: $white;
             font-weight: 700;
             font-size: 2.8rem;
-            margin-bottom: 3.2rem;
+            margin-bottom: 5.2rem;
         }
 
         .solution {
-            color: $white;
+            color: $Lighter_Yellow_bg_color;
 
             img {
+                z-index: 0;
+            }
+
+            svg {
                 z-index: 0;
             }
 
@@ -184,14 +170,52 @@
                 margin-top: -4rem;
                 margin-bottom: 2.4rem;
                 z-index: 1;
+
+                &.double {
+                    margin-top: -8rem;
+                }
             }
 
             p {
-                color: $white;
+                color: $Lighter_Yellow_bg_color;
                 font-weight: 400;
                 font-size: 1.6rem;
                 line-height: 160%;
                 margin-bottom: 3.2rem;
+
+                &.result_small {
+                    font-size: 1.2rem;
+                    margin-bottom: 0.8rem;
+                    line-height: 140%;
+                }
+
+                &.result_big {
+                    font-family: 'Libre Baskerville';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 4.8rem;
+                    line-height: 130%;
+                    letter-spacing: 0.05em;
+                    margin-bottom: 3.2rem;
+
+                }
+            }
+
+            .result_share_title {
+                font-family: 'Poppins', sans-serif;
+                font-weight: 500;
+                font-size: 1.6rem;
+                line-height: 160%;
+                color: $Lighter_Yellow_bg_color;
+                margin-bottom: 1.6rem;
+
+            }
+
+            .social-icons {
+                display: flex;
+                gap: 1.6rem;
+                align-items: center;
+                justify-content: center;
             }
 
             a {
@@ -205,7 +229,94 @@
                 margin-bottom: 5.6rem;
             }
         }
+
+        .secondary-title {
+            color: $Lighter_Yellow_bg_color;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            margin-bottom: 1.6rem;
+            line-height: 155%;
+        }
+    }
+
+    .multiple_question {
+        .avatar {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 5.6rem;
+
+            .avatar_background {
+                position: absolute;
+            }
+
+            img {
+                position: relative;
+                margin: 0 auto;
+            }
+
+            .avatar_circles {
+                position: absolute;
+            }
+        }
+
+    }
+
+    .select_pairs {
+        .pairs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            gap: 1.5em;
+        }
+
     }
 
 
+}
+
+
+//Options 
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    width: 100%;
+
+    .option {
+        padding: 1.6rem 2.4rem;
+        background: $Light_Yellow_bg_color;
+        color: $Darker_Blue_text;
+        border: 0.2rem solid $white;
+        border-radius: 20rem;
+
+        &.active {
+            background: $Yellow_CTA;
+            border-color: $Darker_Blue_text;
+        }
+    }
+}
+
+// Avatar
+.avatar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5.6rem;
+
+    .avatar_background {
+        position: absolute;
+    }
+
+    img {
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .avatar_circles {
+        position: absolute;
+    }
 }

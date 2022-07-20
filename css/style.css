@@ -665,7 +665,8 @@ h2 {
   display: none !important;
 }
 
-button {
+button,
+a.btn {
   padding: 0.8rem 2.4rem;
   color: #ffffff;
   border: none;
@@ -676,12 +677,14 @@ button {
 }
 
 @media screen and (min-width: 76.7) {
-  button {
+  button,
+  a.btn {
     padding: 1.2rem 2rem;
   }
 }
 
-button.primary {
+button.primary,
+a.btn.primary {
   display: inline-block;
   background-color: #009DE0;
   color: #ffffff;
@@ -691,7 +694,8 @@ button.primary {
           box-shadow: 0px 4px 10px rgba(59, 61, 61, 0.2);
 }
 
-button.secondary {
+button.secondary,
+a.btn.secondary {
   -webkit-box-shadow: 0.4rem 0.6rem 0rem #003F5A;
           box-shadow: 0.4rem 0.6rem 0rem #003F5A;
   border: 0.2rem solid;
@@ -700,19 +704,22 @@ button.secondary {
   border-color: #003F5A;
 }
 
-button.secondary:disabled {
+button.secondary:disabled,
+a.btn.secondary:disabled {
   cursor: not-allowed;
   background-color: #F9EFD0;
 }
 
-button.newsletter {
+button.newsletter,
+a.btn.newsletter {
   padding: 1rem 2.4rem;
   -ms-flex-item-align: start;
       align-self: flex-start;
   z-index: 1;
 }
 
-button.challenge {
+button.challenge,
+a.btn.challenge {
   background-color: #005e86;
   -webkit-box-shadow: 0.4rem 0.6rem 0rem #003F5A;
           box-shadow: 0.4rem 0.6rem 0rem #003F5A;
@@ -720,12 +727,14 @@ button.challenge {
   border-radius: 3rem;
 }
 
-button.challenge:hover {
+button.challenge:hover,
+a.btn.challenge:hover {
   background-color: #ffc000;
   border-color: #003F5A;
 }
 
-button.challenge_secondary {
+button.challenge_secondary,
+a.btn.challenge_secondary {
   color: #003F5A;
   background-color: #FFC000;
   border-color: #003F5A;
@@ -888,7 +897,8 @@ button.challenge_secondary {
   color: #898b8b;
 }
 
-.card_challenge_body button {
+.card_challenge_body button,
+.card_challenge_body a {
   -webkit-box-shadow: 0.4rem 0.6rem 0rem #003F5A;
           box-shadow: 0.4rem 0.6rem 0rem #003F5A;
   border: 0.2rem solid;
@@ -1392,7 +1402,7 @@ section.cta-challenge .cta_challenge_content .subtitle {
   line-height: 160%;
 }
 
-section.cta-challenge .cta_challenge_content button {
+section.cta-challenge .cta_challenge_content button, section.cta-challenge .cta_challenge_content a {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -1791,31 +1801,6 @@ section.newsletter-section {
   height: 100%;
 }
 
-.challenge-game .choose_ciclo .options {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 2.4rem;
-  width: 100%;
-}
-
-.challenge-game .choose_ciclo .options .option {
-  padding: 1.6rem 2.4rem;
-  background: #F9EFD0;
-  color: #003F5A;
-  border: 0.2rem solid #ffffff;
-  border-radius: 20rem;
-}
-
-.challenge-game .choose_ciclo .options .option.active {
-  background: #FFC000;
-  border-color: #003F5A;
-}
-
 .challenge-game .quiz-header {
   width: 100%;
   width: 100%;
@@ -1969,14 +1954,18 @@ section.newsletter-section {
   color: #ffffff;
   font-weight: 700;
   font-size: 2.8rem;
-  margin-bottom: 3.2rem;
+  margin-bottom: 5.2rem;
 }
 
 .challenge-game .result .solution {
-  color: #ffffff;
+  color: #FCF7E8;
 }
 
 .challenge-game .result .solution img {
+  z-index: 0;
+}
+
+.challenge-game .result .solution svg {
   z-index: 0;
 }
 
@@ -1996,12 +1985,54 @@ section.newsletter-section {
   z-index: 1;
 }
 
+.challenge-game .result .solution span.double {
+  margin-top: -8rem;
+}
+
 .challenge-game .result .solution p {
-  color: #ffffff;
+  color: #FCF7E8;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 160%;
   margin-bottom: 3.2rem;
+}
+
+.challenge-game .result .solution p.result_small {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  line-height: 140%;
+}
+
+.challenge-game .result .solution p.result_big {
+  font-family: 'Libre Baskerville';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  margin-bottom: 3.2rem;
+}
+
+.challenge-game .result .solution .result_share_title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 160%;
+  color: #FCF7E8;
+  margin-bottom: 1.6rem;
+}
+
+.challenge-game .result .solution .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.6rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .challenge-game .result .solution a {
@@ -2013,5 +2044,103 @@ section.newsletter-section {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   margin-bottom: 5.6rem;
+}
+
+.challenge-game .result .secondary-title {
+  color: #FCF7E8;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 1.6rem;
+  line-height: 155%;
+}
+
+.challenge-game .multiple_question .avatar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 5.6rem;
+}
+
+.challenge-game .multiple_question .avatar .avatar_background {
+  position: absolute;
+}
+
+.challenge-game .multiple_question .avatar img {
+  position: relative;
+  margin: 0 auto;
+}
+
+.challenge-game .multiple_question .avatar .avatar_circles {
+  position: absolute;
+}
+
+.challenge-game .select_pairs .pairs {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  gap: 1.5em;
+}
+
+.options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.4rem;
+  width: 100%;
+}
+
+.options .option {
+  padding: 1.6rem 2.4rem;
+  background: #F9EFD0;
+  color: #003F5A;
+  border: 0.2rem solid #ffffff;
+  border-radius: 20rem;
+}
+
+.options .option.active {
+  background: #FFC000;
+  border-color: #003F5A;
+}
+
+.avatar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 5.6rem;
+}
+
+.avatar .avatar_background {
+  position: absolute;
+}
+
+.avatar img {
+  position: relative;
+  margin: 0 auto;
+}
+
+.avatar .avatar_circles {
+  position: absolute;
 }
 /*# sourceMappingURL=style.css.map */

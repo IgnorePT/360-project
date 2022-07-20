@@ -1,23 +1,22 @@
 <html lang="en">
 
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Game Example</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style.css" />
     </head>
 
     <body>
         <section class="challenge-game">
-            <div id="ciclo-section" class="choose_ciclo hidden">
+            <div id="ciclo-section" class="choose_ciclo">
                 <div class="quiz-header">
-                    <button class="close-challenge">
+                    <a href="index.html" class="btn close-challenge">
                         <img src="assets/svg/icons/close.svg" />
-                    </button>
+                    </a>
                     <h3>Qual o ciclo de escolaridade?</h3>
                 </div>
-                
 
                 <div class="options">
                     <button class="option">1º Ciclo</button>
@@ -42,9 +41,9 @@
                         <button class="close-challenge">
                             <img src="assets/svg/icons/play.svg" />
                         </button>
-                        <button class="close-challenge">
+                        <a href="index.html" class="btn close-challenge">
                             <img src="assets/svg/icons/close.svg" />
-                        </button>
+                        </a>
                     </div>
                 </div>
 
@@ -53,35 +52,198 @@
                     <h3 class="title">Qual destas cantoras tem o tema “Good 4 u”?</h3>
                 </div>
 
-                <div class="image-game ">
-                    <div class="image" data-solution="false"><img src="assets/images/game/singer/billy.png"></div>
-                    <div class="image" data-solution="false"><img src="assets/images/game/singer/ava_max.png"></div>
-                    <div class="image" data-solution="false"><img src="assets/images/game/singer/duoalipa.png"></div>
-                    <div class="image" data-solution="true"><img src="assets/images/game/singer/olivia.png"></div>
+                <div class="image-game">
+                    <div class="image" data-solution="false">
+                        <img src="assets/images/game/singer/billy.png" />
+                    </div>
+                    <div class="image" data-solution="false">
+                        <img src="assets/images/game/singer/ava_max.png" />
+                    </div>
+                    <div class="image" data-solution="false">
+                        <img src="assets/images/game/singer/duoalipa.png" />
+                    </div>
+                    <div class="image" data-solution="true">
+                        <img src="assets/images/game/singer/olivia.png" />
+                    </div>
                 </div>
             </div>
 
-            <div  id="result_1" class="result ">
-
-
+            <div id="result_1" class="result hidden">
                 <h5 class="result_title">Excelente</h5>
 
                 <div class="solution">
-                    <img src="assets/images/game/singer/solution.png">
+                    <img src="assets/images/game/singer/solution.png" />
                     <span>Olivia Rodrigo</span>
                     <p>
-                        Olivia Rodrigo é uma cantora norte-americana, que atingiu enorme sucesso com o lançamento do seu
-                        primeiro disco em 2021.
+                        Olivia Rodrigo é uma cantora norte-americana, que atingiu enorme
+                        sucesso com o lançamento do seu primeiro disco em 2021.
                     </p>
-                    <a href="https://en.wikipedia.org/wiki/Olivia_Rodrigo">Saber mais</a>
+                    <a target="_blank" href="https://en.wikipedia.org/wiki/Olivia_Rodrigo">
+                        Saber mais
+                    </a>
                 </div>
 
-                <button class="secondary">Continuar</button>
-
+                <button id="next_challenge" class="secondary">Continuar</button>
             </div>
 
+            <div id="question_2" class="challenge-question hidden">
+                <div class="question-header">
+                    <div class="question_number">
+                        <span class="question_number_text">2/3</span>
+                        <div class="question_dots">
+                            <span class="dot active"></span>
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <div class="question_header_icons">
+                        <button class="close-challenge">
+                            <img src="assets/svg/icons/play.svg" />
+                        </button>
+                        <a href="index.html" class="btn close-challenge">
+                            <img src="assets/svg/icons/close.svg" />
+                        </a>
+                    </div>
+                </div>
+
+                <div class="challenge-information">
+                    <p class="subtitle">2º Pergunta</p>
+                    <h3 class="title">De que jogo é esta personagem?</h3>
+                </div>
+
+                <div class="multiple_question">
+                    <div class="avatar">
+                        <svg class="avatar_background" width="214" height="207" viewBox="0 0 214 207" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M156.75 28.8978C105.859 -39.2501 38.806 35.1976 32.364 51.4112C23.6839 63.8108 -0.480313 124.064 0.604093 148.191C1.9596 178.348 47.215 196.194 88.8779 204.835C130.541 213.475 174.335 177.33 194.79 164.819C215.245 152.309 218.914 112.364 206.918 92.7992C194.923 73.2342 165.787 40.9988 156.75 28.8978Z"
+                                fill="#CCEBF9" />
+                        </svg>
+                        <img src="./assets/images/game/gamer/fortnite.png" />
+                        <svg class="avatar_circles" width="206" height="209" viewBox="0 0 206 209" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M93.5361 4.77374C60.4207 4.77377 26.2492 21.563 19.2009 39.3025C9.70394 52.869 3.79475 104.584 4.98121 130.981C6.46428 163.977 46.8764 203.66 93.4258 204.302C140.933 204.956 166.379 171.562 188.581 139.309C203.455 117.699 206.702 55.0959 193.578 33.6896C180.453 12.2832 124.761 4.77371 93.5361 4.77374Z"
+                                stroke="#009DE0" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-dasharray="0.1 20" />
+                        </svg>
+                    </div>
+                    <div class="options">
+                        <button class="option" data-solution="false">Free Fire</button>
+                        <button class="option" data-solution="false">God of War</button>
+                        <button class="option" data-solution="true">Fortnite</button>
+                        <button class="option" data-solution="false">Destiny</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="result_2" class="result hidden">
+                <h5 class="result_title">Excelente</h5>
+
+                <div class="solution">
+                    <div class="avatar">
+                        <svg class="avatar_background" width="214" height="207" viewBox="0 0 214 207" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M156.75 28.8978C105.859 -39.2501 38.806 35.1976 32.364 51.4112C23.6839 63.8108 -0.480313 124.064 0.604093 148.191C1.9596 178.348 47.215 196.194 88.8779 204.835C130.541 213.475 174.335 177.33 194.79 164.819C215.245 152.309 218.914 112.364 206.918 92.7992C194.923 73.2342 165.787 40.9988 156.75 28.8978Z"
+                                fill="#CCEBF9" />
+                        </svg>
+                        <img src="./assets/images/game/gamer/fortnite.png" />
+                        <svg class="avatar_circles" width="206" height="209" viewBox="0 0 206 209" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M93.5361 4.77374C60.4207 4.77377 26.2492 21.563 19.2009 39.3025C9.70394 52.869 3.79475 104.584 4.98121 130.981C6.46428 163.977 46.8764 203.66 93.4258 204.302C140.933 204.956 166.379 171.562 188.581 139.309C203.455 117.699 206.702 55.0959 193.578 33.6896C180.453 12.2832 124.761 4.77371 93.5361 4.77374Z"
+                                stroke="#009DE0" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-dasharray="0.1 20" />
+                        </svg>
+                    </div>
+                    <span class="double">Fortnite</span>
+                    <p>
+                        Fortnite é um jogo multiplataforma, em estilo “battle royale” onde os jogadores procuram
+                        equipar-se com armas, recursos e itens,
+                        que os ajudem serem a última equipa a sobreviver.
+                    </p>
+                    <a target="_blank" href="https://www.hisawyer.com/blog/3-benefits-of-playing-fortnite">
+                        Saber mais
+                    </a>
+                </div>
+
+                <button id="next_challenge_last" class="secondary">Continuar</button>
+            </div>
+
+            <div id="question_3" class="challenge-question hidden">
+                <div class="question-header">
+                    <div class="question_number">
+                        <span class="question_number_text">3/3</span>
+                        <div class="question_dots">
+                            <span class="dot active"></span>
+                            <span class="dot active"></span>
+                            <span class="dot active"></span>
+                        </div>
+                    </div>
+                    <div class="question_header_icons">
+                        <button class="close-challenge">
+                            <img src="assets/svg/icons/play.svg" />
+                        </button>
+                        <a href="index.html" class="btn close-challenge">
+                            <img src="assets/svg/icons/close.svg" />
+                        </a>
+                    </div>
+                </div>
+
+                <div class="challenge-information">
+                    <p class="subtitle">3º Pergunta</p>
+                    <h3 class="title">Seleciona as gírias a seus respectivos significados?</h3>
+                </div>
+
+                <div class="select_pairs">
+                    <div class="options pairs">
+                        <button class="option pair" data-pair="1">Rir</button>
+                        <button class="option pair" data-pair="2">QMD</button>
+                        <button class="option pair" data-pair="3">Meu Deus</button>
+                        <button class="option pair" data-pair="4">Crush</button>
+                        <button class="option pair" data-pair="4">Interesse romântico</button>
+                        <button class="option pair" data-pair="1">Grizar</button>
+                        <button class="option pair" data-pair="2">Quem
+                            me dera</button>
+                        <button class="option" data-pair="3">MDS</button>
+                    </div>
 
 
+                </div>
+
+            </div>
+            </div>
+
+            <div id="result_final" class="result hidden">
+                <h5 class="result_title">Resultado</h5>
+
+                <div class="solution">
+                    <p class="result_small">Seu índice de desempenho</p>
+                    <p class="result_big">35%</p>
+
+                    <h4 class="result_share_title">Compartilha seu resultado</h4>
+                    <div class="social-icons">
+                        <a href="https://facebook.com">
+                            <img src="assets/svg/icons/social/facebook.svg" alt="Partilha no Facebook"
+                                srcset="">
+                            </a>
+                        <a href="https://instagram.com">
+                            <img src="assets/svg/icons/social/instagram.svg" alt="Partilha no Instagram"
+                            srcset="">
+                        </a>
+                        <a href="https://whatsapp.com">
+                            <img src="assets/svg/icons/social/whatsapp.svg" alt="Partilha no What"
+                            srcset="">
+                        </a>
+
+                    </div>
+                </div>
+              
+                    <h4 class="secondary-title">Explora mais desafios</h4>
+                    <a href="dashboard.html" class="btn primary">Criar conta</a>
+
+            </div>
         </section>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>

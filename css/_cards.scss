@@ -134,7 +134,8 @@
 			color: $dark-grey;
 		}
 
-		button {
+		button,
+		a {
 			@include challenge-mobile;
 		}
 	}
