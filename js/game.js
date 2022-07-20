@@ -146,7 +146,7 @@ function GameQuiz() {
         });
 }
 
-function pairGame() {
+function PairGame() {
     document
         .querySelectorAll("#question_3 > .select_pairs > .options > .option")
         .forEach(function (btn) {
@@ -204,6 +204,14 @@ function finishGame() {
     setTimeout(function () {
         hideSectionById("question_3");
         showSectinById("result_final");
+        showSectinById("final_result_bg");
+
+
+        gsap.from("#final_result_bg", {
+            opacity: 0,
+            duration: 0.8,
+            ease: "power2.out",
+        });
 
         gsap.from("#result_final", {
             opacity: 0,
@@ -211,8 +219,8 @@ function finishGame() {
             scale: 0.8,
             ease: "power2.out",
         });
-    })
 
+    }, 800)
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -279,7 +287,7 @@ function LoadPairGame() {
     document
         .getElementById("next_challenge_last")
         .addEventListener("click", function () {
-            pairGame();
+            PairGame();
 
             gsap.to("#result_2", {
                 opacity: 0,

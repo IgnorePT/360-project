@@ -76,4 +76,18 @@
         }
     }
 
+    .result-screen{
+        >.big-shape {
+                top: 45%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+        }
+
+        >.dots {
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
 }

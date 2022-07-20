@@ -1869,6 +1869,20 @@ section.newsletter-section {
   right: 0rem;
 }
 
+.game-background .result-screen > .big-shape {
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.game-background .result-screen > .dots {
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 body.game {
   background: #005E86;
 }
@@ -2025,6 +2039,7 @@ body.game {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 8rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
