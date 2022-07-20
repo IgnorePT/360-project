@@ -17,11 +17,15 @@ section {
 	}
 
 	&.landing-video {
-		background: url(../assets/images/landing_home.jpg);
-		background-size: cover;
-		background-color: $dark-grey;
-		background-position: center center;
 		height: 100vh;
+
+		.cover_video{
+			position: absolute;
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+		}
 
 		&::after {
 			content: "";

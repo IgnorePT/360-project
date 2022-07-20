@@ -1121,11 +1121,16 @@ section.landing-first .section-text {
 }
 
 section.landing-video {
-  background: url(../assets/images/landing_home.jpg);
-  background-size: cover;
-  background-color: #898b8b;
-  background-position: center center;
   height: 100vh;
+}
+
+section.landing-video .cover_video {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 section.landing-video::after {
