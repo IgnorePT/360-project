@@ -3,6 +3,8 @@ var pairGameTemp = 0;
 var attemptsOnPairGame = 0;
 var pairsCompleted = 0;
 
+var finalPoints = 0;
+
 function hideSectionById(id) {
     document.getElementById(id).classList.add("hidden");
 }
@@ -76,8 +78,7 @@ function LoadMusicQuiz() {
 
                 if (isSolution) {
                     console.log("Right");
-                    //gsap.to("#question_1_dots", { x: "85%", y: "6%", scale: 1.6 });
-                    //animateQ1Dots();
+                    finalPoints++
                 } else {
                     console.log("Wrong");
                 }
@@ -111,6 +112,7 @@ function GameQuiz() {
                 document.querySelector("#result_2 .result_title").innerText = title;
                 if (isSolution) {
                     console.log("Animate Right");
+                    finalPoints++
                 } else {
                     console.log("Animate Wrong");
                 }
@@ -151,6 +153,11 @@ function PairGame() {
         .querySelectorAll("#question_3 > .select_pairs > .options > .option")
         .forEach(function (btn) {
             btn.addEventListener("click", function (e) {
+                
+                if(this.classList.contains('shake')){
+                    this.classList.remove('shake');
+                }
+
                 if (!pairGameTemp) {
                     return (pairGameTemp = this.dataset.pair);
                 }
@@ -169,7 +176,9 @@ function PairGame() {
                     pairGameTemp = 0;
                     pairsCompleted++;
                 } else {
-                    if (attemptsOnPairGame >= 4) {
+
+                    this.classList.add('shake');
+                    if (attemptsOnPairGame >= 2) {
                         console.log("Jogo dos Pares Completo - Erro!");
                         finishGame();
                     }
@@ -186,6 +195,7 @@ function PairGame() {
 
                 if (pairsCompleted === 4) {
                     console.log("Jogo dos Pares Completo - Sucerro");
+                    finalPoints++;
                     finishGame();
                 }
             });
@@ -193,6 +203,11 @@ function PairGame() {
 }
 
 function finishGame() {
+
+    const result = (finalPoints / 3) * 100;
+
+    document.querySelector(".result_big").innerText = result.toFixed() + "%";
+
 
     gsap.to("#question_3", {
         opacity: 0,
@@ -326,3 +341,5 @@ function LoadPairGame() {
 
         });
 }
+
+
