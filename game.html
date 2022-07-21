@@ -43,7 +43,7 @@
         <link rel="stylesheet" href="css/style.css" />
     </head>
 
-    <body class="game">
+    <body id="screen" class="game">
         <section class="challenge-game">
 
             <div class="game-background z-1">
@@ -408,16 +408,11 @@
         <script src="js/game.js"></script>
 
         <script>
-            function filter(node) {
-                console.log(node);
-                return (node.tagName !== 'button');
-            }
-
             Array.from(document.querySelectorAll(".social-icons")).forEach(function (btn) {
                 btn.addEventListener('click', async function () {
                     document.getElementById('share_result').style.display = "none";
 
-                    let blob = await domtoimage.toBlob(document.getElementById('screen'), { filter: filter });
+                    let blob = await domtoimage.toBlob(document.getElementById('screen'));
 
                     const file = new File([blob], "resultado.png", { type: "image/png" });
 
