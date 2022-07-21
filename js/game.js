@@ -205,7 +205,7 @@ function finishGame() {
 
     const result = (finalPoints / 3) * 100;
 
-    const ResultTitleContainer = document.querySelector(".result_title");
+    const ResultTitleContainer = document.querySelector("#result_final .result_title");
 
     document.querySelector(".result_big").innerText = result.toFixed() + "%";
 

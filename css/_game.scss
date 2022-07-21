@@ -1,6 +1,7 @@
 body{
     &.game{
         background: $Medium_Blue_CTA;
+        overflow-y: hidden;
     }
 }
 
@@ -8,6 +9,8 @@ body{
     background: $Medium_Blue_CTA;
     min-height: 100vh;
     z-index: 1;
+    max-width: 56rem;
+    margin: 0 auto;
 
     .choose_ciclo {
         padding: 3.2rem 1.5rem;
