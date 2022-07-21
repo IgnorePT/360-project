@@ -2147,7 +2147,7 @@ body.game {
           justify-content: center;
 }
 
-.challenge-game .result .solution a {
+.challenge-game .result .solution a, .challenge-game .result .solution button {
   display: block;
   color: #ffffff;
   font-weight: 500;

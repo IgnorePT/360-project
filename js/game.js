@@ -233,8 +233,16 @@ function finishGame() {
         ease: "power2.out",
     });
 
+    gsap.to("#question_3_bg", {
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
+    });
+
     setTimeout(function () {
         hideSectionById("question_3");
+        hideSectionById("question_3_bg");
+
         showSectinById("result_final");
         showSectinById("final_result_bg");
 
