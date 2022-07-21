@@ -2,7 +2,6 @@ var initGame = document.getElementById("init_game");
 var pairGameTemp = 0;
 var attemptsOnPairGame = 0;
 var pairsCompleted = 0;
-
 var finalPoints = 0;
 
 function hideSectionById(id) {
@@ -206,7 +205,26 @@ function finishGame() {
 
     const result = (finalPoints / 3) * 100;
 
+    const ResultTitleContainer = document.querySelector(".result_title");
+
     document.querySelector(".result_big").innerText = result.toFixed() + "%";
+
+    if(finalPoints == 100){
+        ResultTitleContainer.innerText = "Wow! Parabens";
+    }
+
+    if(finalPoints > 66 && finalPoints < 100){
+        ResultTitleContainer.innerText = "Muito bem!"
+    }
+
+    if(finalPoints > 66 && finalPoints < 34){
+        ResultTitleContainer.innerText = "Estas quase lá!"
+    }
+
+    
+    if(finalPoints < 34){
+        ResultTitleContainer.innerText = "Ops!"
+    }
 
 
     gsap.to("#question_3", {
