@@ -417,17 +417,19 @@
 
             document.querySelector("#share_result").addEventListener('click', async function () {
                 let blob = await domtoimage.toBlob(document.getElementById('screen'));
-                window.saveAs(blob, 'my-node.png');
+                // window.saveAs(blob, 'my-node.png');
+
+                const file = new File([blob], "resultado.png", { type: "image/png" });
 
                 try {
-                    await navigator.share({ title: "Pais & Alunos", url: "https://paisealunos.foxcoding.net/game.html"});
+                    await navigator.share({ title: "Pais & Alunos", url: "https://paisealunos.foxcoding.net/game.html", files: [file] });
                     console.log("Data was shared successfully");
                 } catch (err) {
                     console.error("Share failed:", err.message);
                 }
             })
 
-            
+
 
 
         </script>
