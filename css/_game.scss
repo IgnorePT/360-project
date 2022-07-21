@@ -137,11 +137,14 @@ body{
         padding: 3.2rem 1.5rem;
         display: flex;
         flex-direction: column;
-        gap: 8rem;
         align-items: center;
         justify-content: center;
-        height: 100%;
+        min-height: 100%;
         text-align: center;
+
+        &#result_final{
+            gap: 8rem;
+        }
 
         .result_title {
             font-family: "Libre Baskerville", serif;
