@@ -209,23 +209,22 @@ function finishGame() {
 
     document.querySelector(".result_big").innerText = result.toFixed() + "%";
 
-    if(finalPoints == 100){
-        ResultTitleContainer.innerText = "Wow! Parabens";
-    }
-
-    if(finalPoints > 66 && finalPoints < 100){
-        ResultTitleContainer.innerText = "Muito bem!"
-    }
-
-    if(finalPoints > 66 && finalPoints < 34){
-        ResultTitleContainer.innerText = "Estas quase lá!"
-    }
-
-    
-    if(finalPoints < 34){
+        
+    if(result < 34){
         ResultTitleContainer.innerText = "Ops!"
     }
 
+    if(result > 66 && result < 34){
+        ResultTitleContainer.innerText = "Quase lá!"
+    }
+
+    if(result > 66 && result < 100){
+        ResultTitleContainer.innerText = "Muito bem!"
+    }
+
+    if(result == 100){
+        ResultTitleContainer.innerText = "Excelente!";
+    }
 
     gsap.to("#question_3", {
         opacity: 0,

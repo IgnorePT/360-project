@@ -1,5 +1,5 @@
-body{
-    &.game{
+body {
+    &.game {
         background: $Medium_Blue_CTA;
     }
 }
@@ -18,13 +18,13 @@ body{
         justify-content: space-between;
         min-height: 100%;
 
-        .options{
+        .options {
             margin-top: 4rem;
             margin-bottom: 4rem;
 
         }
 
-        #init_game{
+        #init_game {
             margin-bottom: 4rem;
         }
 
@@ -142,7 +142,7 @@ body{
         min-height: 100%;
         text-align: center;
 
-        &#result_final{
+        &#result_final {
             gap: 8rem;
         }
 
@@ -283,8 +283,8 @@ body{
             grid-auto-rows: 1fr;
             gap: 1.5em;
 
-            .pair{
-                &.shake{
+            .pair {
+                &.shake {
                     animation: tilt-shaking 0.3s linear;
                 }
             }
@@ -341,9 +341,23 @@ body{
 
 
 @keyframes tilt-shaking {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(5deg); }
-    50% { transform: rotate(0eg); }
-    75% { transform: rotate(-5deg); }
-    100% { transform: rotate(0deg); }
-  }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(0eg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
