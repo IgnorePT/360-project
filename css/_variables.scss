@@ -39,3 +39,7 @@ $grid-width: calc(100% - #{$grid-gutter});
 $grid-width-t: calc(90% - #{$grid-gutter});
 $grid-width-d: $desktop - $grid-gutter * 3;
 $grid-width-d-lg: $desktop-lg - $grid-gutter * 4;
+
+// Fonts
+$Libre_Baskerville: "Libre Baskerville", serif;
+$Poppins: 'Poppins', sans-serif;

@@ -7,4 +7,30 @@ select {
     border-radius: 2rem;
     color: $Brand_Grey_text_onlightbg;
     margin-bottom: 2.4rem;
+    position: relative;
+
+    &::placeholder{
+        font-family: $Poppins;
+        color: $Darker_Blue_text;
+    }
+
+    &.no-margin{
+        margin-bottom: 0rem;
+    }
+
+    &.rounded {
+        border-radius: 3rem;
+    }
+
+    &.on-light-bg {
+        background-color: $Lighter_Yellow_bg_color;
+
+        &::placeholder{
+            color: $Darker_Blue_text;
+        }
+    }
+
+    &.with-icon {
+        padding-left: 5.6rem;
+    }
 }

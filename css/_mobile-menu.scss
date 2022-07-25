@@ -1,0 +1,74 @@
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    padding: 2.66rem 1.5rem;
+    background: $white;
+    z-index: 10;
+    left: -100%;
+    top: 0;
+    background: $Medium_Blue_bg_color;
+    transition: all 0.4s ease-in;
+
+    &.active{
+        left: 0;
+    }
+
+    .header {
+        .menu {
+            display: flex;
+            align-items: center;
+            gap: 1.6rem;
+            margin-bottom: 2.4rem;
+
+            .close-icon {
+                path {
+                    fill: $Darker_Blue_text;
+                    stroke: $Darker_Blue_text;
+                }
+            }
+        }
+
+        .search{
+            position: relative;
+
+            .icon{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 9;
+                left: 2.4rem;
+            }
+        }
+    }
+
+    .main-menu{
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+
+
+        a{
+            font-family: $Libre_Baskerville;
+            color: $Darker_Blue_text;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 2.8rem;
+            line-height: 3.6rem;
+        }
+    }
+
+    .create-challenge{
+        text-align: center;
+
+        p{
+            color: $Darker_Blue_text;
+            font-size: 1.4rem;
+            margin: 0 2.4rem 2.4rem;
+            line-height: 140%;
+        }
+    }
+}

@@ -47,8 +47,8 @@
         <header>
             <nav>
                 <div class="left_nav">
-                    <a href="#menu"><img src="assets/svg/icons/hamburger_menu.svg" alt="Pesquisa..."></a>
-                    <div class="logo">
+                    <a id="open-hamburger-menu"><img src="assets/svg/icons/hamburger_menu.svg" alt="Pesquisa..."></a>
+                    <div class="header-logo">
                         <img src="assets/svg/logo.svg" alt="Pais & Alunos">
                     </div>
                 </div>
@@ -358,6 +358,57 @@
             </div>
 
         </footer>
+
+        <div class="mobile-menu">
+            <div class="header">
+                <div class="menu">
+                    <a id="close-hamburger-menu">
+                        <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 6L6 18" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M6 6L18 18" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></a>
+                    <a class="header-logo">
+                        <img src="/assets/svg/logo.svg" alt="Pais & Alunos">
+                    </a>
+                </div>
+
+                <div class="search">
+                    <img class="icon" src="/assets/svg/icons/search.svg" />
+                    <input class="rounded on-light-bg with-icon no-margin" placeholder="Filtar por" />
+                </div>
+
+            </div>
+
+
+            <nav class="main-menu">
+                <a href="/dashboard.html">Dashboard</a>
+                <a href="/equipa.html">Equipa</a>
+                <a href="/artigos.html">Artigos</a>
+                <a href="/desafios.html">Desafios</a>
+                <a href="/contacto.html">Contacto</a>
+                </ul>
+            </nav>
+
+            <div class="create-challenge">
+                <p>
+                    Experimente um desafio personalizado e veja o quanto conhece o seu educando
+                </p>
+                <button class="secondary with-icon align-center">
+                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5 5V19" stroke="#003F5A" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M5.5 12H19.5" stroke="#003F5A" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+
+                    Criar desafio
+                </button>
+            </div>
+
+        </div>
 
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
