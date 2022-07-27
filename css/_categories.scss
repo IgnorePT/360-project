@@ -1,0 +1,23 @@
+.categories_group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+
+
+    .categories {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.6rem 0.8rem;
+
+        .category {
+            background: $white;
+            padding: 0.8rem 1.2rem;
+            border-radius: 50px;
+            font-size: 1.4rem;
+
+            &.with-bg{
+                background: $Medium_Yellow_details_bg ;
+            }
+        }
+    }
+}
