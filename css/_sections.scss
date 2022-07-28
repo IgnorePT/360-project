@@ -54,6 +54,11 @@ section, div {
 		background-size: cover;
 		background-position: top center;
 
+		@media screen and (min-width: 76.7rem) {
+			background: url(../assets/svg/backgrounds/first_section.svg);
+
+		}
+
 		.subtitle {
 			font-size: clamp(1.6rem, 100%, 2.4rem);
 			color: $Brand_Grey_text_onlightbg;

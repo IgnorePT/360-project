@@ -590,7 +590,9 @@ table {
   width: 100%;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -612,6 +614,10 @@ button {
   color: #2f3131;
   font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #FCF7E8;
 }
 
 main {
@@ -801,6 +807,7 @@ a.btn.challenge_secondary {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  min-width: 24.7rem;
 }
 
 .card_challenge {
@@ -1167,7 +1174,7 @@ header nav .menu {
 }
 
 .breadcrumbs {
-  padding: 3rem 0rem;
+  padding: 3rem 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1400,6 +1407,12 @@ section.initial_section, div.initial_section {
   background: url(../assets/svg/backgrounds/first_section_mobile.svg);
   background-size: cover;
   background-position: top center;
+}
+
+@media screen and (min-width: 76.7rem) {
+  section.initial_section, div.initial_section {
+    background: url(../assets/svg/backgrounds/first_section.svg);
+  }
 }
 
 section.initial_section .subtitle, div.initial_section .subtitle {
@@ -2022,11 +2035,18 @@ section.newsletter-section, div.newsletter-section {
 }
 
 .challenge_list {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   gap: 2.4rem;
+}
+
+@media screen and (min-width: 76.7rem) {
+  .challenge_list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 main.article {
@@ -2128,6 +2148,10 @@ main.article .article-content p.highlight {
 
 main.article .article-content .mini-game {
   margin-bottom: 8.8rem;
+}
+
+main.article .article-footer .share-article {
+  padding: 0 1.5rem;
 }
 
 main.article .article-footer .related-categories {
