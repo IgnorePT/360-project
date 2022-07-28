@@ -1,0 +1,101 @@
+.dashboard{
+    padding: 0;
+    section{
+        padding: 2.4rem 1.5rem;
+        overflow: hidden;
+        &.dashboard-profile{
+            background-color: $Medium_Blue_bg_color;
+            display: flex;
+            flex-direction: column;
+            gap: 3.2rem;
+
+
+
+            .name{
+                font-weight: 700;
+                font-size: 2.8rem;
+            }
+
+            .dashboard-avatar{
+                position: relative;
+                display: flex;
+                justify-content: center;
+
+                .avatar-main{
+                }
+
+                .avatar-children{
+                    position: absolute;
+                    bottom: -3.3rem;
+                }
+            }
+
+            .score{
+                display: flex;
+                flex-direction: column;
+                gap: 0.8rem;
+                justify-content: center;
+                align-items: center;
+
+                .small-text{
+                    font-size: 1.4rem;
+                    line-height: 165%;
+                }
+
+                .big-text{
+                    font-family: $Libre_Baskerville;
+                    font-weight: 700;
+                    font-size: 4.8rem;
+                    line-height: 130%;
+                }
+            }
+        }
+
+        &.categories-filter{
+            padding: 12rem 1.5rem;
+
+            &::before {
+                content: "";
+                position: absolute;
+                background: url(../assets/svg/dividers/dashboard-profile.svg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                height: 4.2rem;
+                width: 105vw;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 0;
+            }
+        }
+
+        .section-title{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2.4rem;
+
+            h3{
+                font-family: $Libre_Baskerville;
+                font-weight: 700;
+                font-size: 1.8rem;
+                color: $Darker_Blue_text;
+            }
+
+            a{
+                text-decoration: underline;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+
+.floating-button{
+    position: fixed;
+    padding: 0.8rem;
+    border-radius: 100%;
+    right: 2.4rem;
+    bottom: 2.4rem;
+    z-index: 10;
+}
